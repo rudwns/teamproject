@@ -49,7 +49,7 @@ video{
 					<c:choose>
 						
 						<c:when test="${empty nick}">
-							<h2>로그인 해주세요.</h2>
+							<h2>로그인 해주세요.plz</h2>
 						</c:when>
 						<c:otherwise>
 							<h2>${sessionScope.nick}님 환영합니다</h2>
