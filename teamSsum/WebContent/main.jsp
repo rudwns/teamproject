@@ -30,10 +30,10 @@ video{
 </style>
 </head>
 <body>
-<video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
+<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
                <source src="movie3.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
-            </video>
+            </video> -->
 	<!-- Wrapper -->
 	<div id="wrapper">
 		 
