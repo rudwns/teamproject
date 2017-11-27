@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 	
 </noscript>
+
 <style type="text/css">
 video{
 	position : fixed;
@@ -49,7 +50,7 @@ video{
 						<td><input type="button" value="이동" onclick="location.href='main.jsp'"></td>
 						<td><input type="button" value="이동" onclick="location.href='main.jsp'"></td>
 						<td><input type="button" value="이동" onclick="location.href='main.jsp'"></td>
-						<td><input type="button" value="이동" onclick="location.href='main.jsp'"></td>
+						<td><input type="button" value="이동" onclick="location.href='Temp_show_recomm.jsp'"></td>
 					</tr>
 					<%-- <%
 						BookDAO return_dao = BookDAO.getInstance();
