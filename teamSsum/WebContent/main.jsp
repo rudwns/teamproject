@@ -49,7 +49,7 @@ video{
 					<c:choose>
 						
 						<c:when test="${empty nick}">
-							<h2>로그인 해주세요.plz</h2>
+							<h2>로그인 해주세요.</h2>
 						</c:when>
 						<c:otherwise>
 							<h2>${sessionScope.nick}님 환영합니다</h2>
@@ -66,10 +66,10 @@ video{
 						</c:when>
 						<c:otherwise>
 							<li><a href="Logout.jsp">Logout</a></li>
-							<li><a href="info.jsp">Info</a></li>
-							<li><a href="book_search.jsp">Search</a></li>
-							<li><a href="book_return.jsp">Return</a></li>
-							<li><a href="board.jsp">Borad</a></li>
+							<li><a href="report.jsp">보고서</a></li>
+							<li><a href="advice.jsp">조언</a></li>
+							<li><a href="recommendation.jsp">추천</a></li>
+							<li><a href="greenright.jsp">그린라이트</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
