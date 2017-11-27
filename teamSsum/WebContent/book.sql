@@ -1,3 +1,13 @@
+CREATE TABLE show(
+    title VARCHAR2(50),
+    place VARCHAR2(50),
+    days VARCHAR2 (50),
+    link VARCHAR2(100)
+);
+
+
+
+
 create table book_member(
 	id varchar(50) primary key,
 	pw varchar(50),
