@@ -173,7 +173,9 @@ video {
 
 				request.setAttribute("arr", arr);
 
-			%> <c:forEach items="${arr }" var="vo">
+			%>
+			 
+			<c:forEach items="${arr }" var="vo">
 
 				<li><b>${vo.title }</b>&nbsp&nbsp${vo.place
 					}&nbsp>>>&nbsp${vo.days }<a
