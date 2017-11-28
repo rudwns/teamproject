@@ -36,7 +36,7 @@
 
 %> 
 
-<div id="map" style="width:100%;height:1000px;"></div>
+<div id="map" style="width:50%;height:500px;margin:auto;"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=332dd08ad35ac45d739cd2857682cd7e
 "></script>
@@ -84,12 +84,16 @@ var positions = []
 
 //인포윈도우를 생성합니다
 var infowindow = new daum.maps.InfoWindow({
-        content: '<div style="width:330px; background-color:#E6B8B8; text-align:center;">${list[i].title}</div><div style="width:330px;">${list[i].address}</div><div style="width:330px;">${list[i].phone}</div>' // 인포윈도우에 표시할 내용
+        content: '<div style = "width:300px;height:200px;background:url(${list[i].img})"></div><div style="width:300px; background-color:#E6B8B8; text-align:center;">${list[i].title}</div><div style="width:300px;">${list[i].address}</div><div style="width:300px;">${list[i].phone}</div>' // 인포윈도우에 표시할 내용
     });
 daum.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
 daum.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 </c:forEach>
-  
+
+/* <div style="width:250px; height:250px; background-image:url(${list[i].img})"></div> */
+
+
+
 function makeOverListener(map, marker, infowindow) {
     return function() {
         infowindow.open(map, marker);
@@ -101,18 +105,6 @@ function makeOutListener(infowindow) {
         infowindow.close();
     };
 }
- 
- 
- 
- 
-
- 
- 
-
-
-
-
-
 
 
 // 커스텀 오버레이에 표시할 컨텐츠 입니다

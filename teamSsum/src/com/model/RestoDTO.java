@@ -6,13 +6,15 @@ public class RestoDTO {
 	String address;
 	String phone;
 	String we;
-	public RestoDTO(String title, String mood, String address, String phone, String we) {
+	String img;
+	public RestoDTO(String title, String mood, String address, String phone, String we,String img) {
 		super();
 		this.title = title;
 		this.mood = mood;
 		this.address = address;
 		this.phone = phone;
 		this.we = we;
+		this.img = img;
 	}
 	public String getTitle() {
 		return title;
@@ -43,6 +45,9 @@ public class RestoDTO {
 	}
 	public void setWe(String we) {
 		this.we = we;
+	}
+	public String getImg() {
+		return img;
 	}
 	
 	
