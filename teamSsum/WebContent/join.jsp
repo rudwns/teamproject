@@ -63,6 +63,21 @@ input[type="radio"]{
 						<li><input type="button" value="Cancel" onclick="history.go(-1)"/></li>
 					</ul>
 				</form>
+				
+				<script type="text/javascript">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				</script>
+				
 			</article>
 		</div>
 	</div>
