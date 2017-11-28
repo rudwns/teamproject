@@ -54,9 +54,10 @@ public int uploadFile(String writer, String you, String file) throws Exception {
 		getConnection();
 			
 		// sql ¿€º∫
-		pst = conn.prepareStatement("insert into fileboard values(file_num.nextval,?,?,to_char(sysdate,'YYYY-MM-DD'))");
+		pst = conn.prepareStatement("insert into fileboard values(file_num.nextval,?,?,?,to_char(sysdate,'YYYY-MM-DD'))");
 		pst.setString(1,writer);
-		pst.setString(2, file);
+		pst.setString(2, you);
+		pst.setString(3, file);
 		
 		cnt = pst.executeUpdate();
 
@@ -65,12 +66,12 @@ public int uploadFile(String writer, String you, String file) throws Exception {
 		return cnt;
 	}
 
-public FileVO selectOne(int num) throws Exception{
+public FileVO selectOne(String id) throws Exception{
 	
 	getConnection();
 	
-	pst = conn.prepareStatement("select * from fileboard where num = ?");
-	pst.setInt(1, num);
+	pst = conn.prepareStatement("select * from fileboard where writer = ?");
+	pst.setString(1, id);
 	rs = pst.executeQuery();
 	
 	FileVO vo = null;

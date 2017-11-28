@@ -70,9 +70,9 @@ video {
 				<c:forEach items="${arr}" var="vo">
 					<tr align="center">
 						<td>${vo.day}</td>
-						<td>구름조금</td>
-						<td>${vo.min_temp}</td>
-						<td>${vo.max_temp}</td>
+						<td>${vo.weather}</td>
+						<td>${vo.min_temp} 'C</td>
+						<td>${vo.max_temp} 'C</td>
 					</tr>
 				</c:forEach>
 			</table>

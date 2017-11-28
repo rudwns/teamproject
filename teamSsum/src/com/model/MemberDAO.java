@@ -44,7 +44,7 @@ public class MemberDAO {
 		
 		getConnection();
 		
-		sql = "select * from book_member where nickname=?";
+		sql = "select * from ssum_member where nickname=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, nick);
 		
@@ -63,14 +63,14 @@ public class MemberDAO {
 	public int update(MemberDTO dto) throws Exception{
 		getConnection();
 		
-		System.out.println(dto.getId()+"/"+dto.getPw()+"/"+dto.getNick()+"/"+dto.getEmail()+"/"+dto.getTel());
-		sql = "update book_member set pw=?,nickname=?,email=?,tel=? where id=?";
+		System.out.println(dto.getId()+"/"+dto.getPw()+"/"+dto.getNick()+"/"+dto.getPersonnumber()+"/"+dto.getSex());
+		sql = "update ssum_member set pw=?,nickname=?,personnumber=?,sex=? where id=?";
 		pst = conn.prepareStatement(sql);
 		
 		pst.setString(1, dto.getPw());
 		pst.setString(2, dto.getNick());
-		pst.setString(3, dto.getEmail());
-		pst.setString(4, dto.getTel());
+		pst.setString(3, dto.getPersonnumber());
+		pst.setString(4, dto.getSex());
 		pst.setString(5, dto.getId());
 		
 		cnt = pst.executeUpdate();
@@ -83,7 +83,7 @@ public class MemberDAO {
 	public MemberDTO login(String id, String pw) throws Exception{
 		getConnection();
 		
-		sql = "select * from book_member where id=?";
+		sql = "select * from ssum_member where id=?";
 		
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, id);
@@ -99,17 +99,17 @@ public class MemberDAO {
 		return m_dto;
 	}	
 	
-	public int join(String id, String pw, String nick, String email, String tel) throws Exception{
+	public int join(String id, String pw, String nick, String personnumber, String sex) throws Exception{
 		getConnection();
 		
-		sql = "insert into book_member values(?,?,?,?,?)";
+		sql = "insert into ssum_member values(?,?,?,?,?)";
 		
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, id);
 		pst.setString(2, pw);
 		pst.setString(3, nick);
-		pst.setString(4, email);
-		pst.setString(5, tel);
+		pst.setString(4, personnumber);
+		pst.setString(5, sex);
 		
 		cnt = pst.executeUpdate();
 		
@@ -117,5 +117,15 @@ public class MemberDAO {
 		
 		return cnt;
 	}
+
+	public int delete(String id) throws Exception{
+		getConnection();
+		pst = conn.prepareStatement("delete from ssum_member where id=?");
+		pst.setString(1, id);
+		int cnt = pst.executeUpdate();
+		return cnt;
+	}
+
+	
 	
 }

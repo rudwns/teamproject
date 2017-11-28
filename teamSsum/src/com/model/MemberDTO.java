@@ -4,26 +4,26 @@ public class MemberDTO {
 	private String id;
 	private String pw;
 	private String nick;
-	private String email;
-	private String tel;
+	private String personnumber;
+	private String sex;
 	
 	public MemberDTO(String id, String pw, String nick) {
 		this.id = id;
 		this.pw = pw;
 		this.nick = nick;
 	}
-	public MemberDTO(String id, String nick, String email, String tel) {
+	public MemberDTO(String id, String nick, String personnumber, String sex) {
 		this.id = id;
 		this.nick = nick;
-		this.email = email;
-		this.tel = tel;
+		this.personnumber = personnumber;
+		this.sex = sex;
 	}	
-	public MemberDTO(String id, String pw, String nick, String email, String tel) {
+	public MemberDTO(String id, String pw, String nick, String personnumber, String sex) {
 		this.id = id;
 		this.pw = pw;
 		this.nick = nick;
-		this.email = email;
-		this.tel = tel;
+		this.personnumber = personnumber;
+		this.sex = sex;
 	}
 
 	public String getId() {
@@ -49,21 +49,23 @@ public class MemberDTO {
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
-
-	public String getEmail() {
-		return email;
+	public String getPersonnumber() {
+		return personnumber;
+	}
+	public void setPersonnumber(String personnumber) {
+		this.personnumber = personnumber;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 
-	public String getTel() {
-		return tel;
-	}
+	
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
+	
 	
 }

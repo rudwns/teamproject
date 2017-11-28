@@ -52,7 +52,7 @@ video{
 							<h2>로그인 해주세요.</h2>
 						</c:when>
 						<c:otherwise>
-							<%-- <h2>${sessionScope.nick}님 환영합니다</h2> --%>
+							<h2>${sessionScope.nick}님 환영합니다</h2> 
 							<h2>${sessionScope.id}님 환영합니다.</h2>
 						</c:otherwise>
 					</c:choose>
@@ -68,7 +68,7 @@ video{
 						<c:otherwise>
 							<li><a href="Logout.jsp">Logout</a></li>
 							<li><a href="update.jsp">회원정보수정</a>
-							<li><a href="report.jsp">보고서</a></li>
+							<li><a href="report_fileUpload.jsp">보고서</a></li>
 							<li><a href="advice.jsp">조언</a></li>
 							<li><a href="recommendation.jsp">추천</a></li>
 							<li><a href="greenright.jsp">그린라이트</a></li>
@@ -77,6 +77,7 @@ video{
 				</ul>
 			</nav>
 		</header>
+
 
 		<!-- Footer -->
 		<footer id="footer">

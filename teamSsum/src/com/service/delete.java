@@ -10,40 +10,26 @@ import javax.servlet.http.HttpServletResponse;
 import com.model.MemberDAO;
 
 
-@WebServlet("/Join")
-public class JoinService extends HttpServlet {
-
+@WebServlet("/delete")
+public class delete extends HttpServlet {
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("euc-kr");
-		
 		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String nick = request.getParameter("nick");
-		String personnumber = request.getParameter("personnumber");
-		String sex = request.getParameter("sex");
 		
-		MemberDAO dao = MemberDAO.getInstance();
+		
 		
 		try {
-			int cnt = dao.join(id, pw, nick, personnumber, sex);
+			MemberDAO dao = new MemberDAO();
+			int cnt = dao.delete(id);
 			
-			if(cnt>0) {
+			if (cnt>0) {
 				response.sendRedirect("main.jsp");
 			}
-			response.sendRedirect("main.jsp");			
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	}
 
 }

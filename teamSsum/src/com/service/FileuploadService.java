@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
@@ -39,7 +40,10 @@ public class FileuploadService extends HttpServlet {
 		// request 객체, 파일이 저장될 디렉토리, 올릴 수 있는 파일최대용량, 제목 인코딩, 파일명 중복회피 객체
 		FileDAO dao = FileDAO.getInstance();
 		
-		String writer = multi.getParameter("writer");
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("id");
+		
+		String writer = id;
 		String you = multi.getParameter("you");
 		String file = multi.getFilesystemName("file");
 		

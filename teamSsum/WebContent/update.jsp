@@ -25,7 +25,7 @@
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">Update</h2>
-				<form method="post" action="UpdateService">
+				<form method="post" action="Update">
 					<div class="field half">
 						<label for="id">ID</label> <input type="text" value="${sessionScope.id}" name="id" readonly="readonly" />
 					</div>
@@ -44,6 +44,7 @@
 
 					<ul class="actions">
 						<li><input type="submit" value="Update" class="special" /></li>
+						<li><input type="button" value="Delete" onclick="location.href='delete'" /></li>
 						<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" /></li>
 					</ul>
 				</form>
