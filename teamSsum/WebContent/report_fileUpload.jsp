@@ -46,21 +46,20 @@ video {
 			<article id="Login" class="active">
 				<h2 class="major">파일업로드</h2>
 
-				<form action="FileuploadService" method="post" enctype="multipart/form-data">
+				<form name="form" onsubmit="return check()" action="FileuploadService" method="post" enctype="multipart/form-data">
 
 					<fieldset>
 						<legend align="center">마음이 궁금한 상대와의 대화 파일(.txt)을 선택해주세요</legend>
 
 						<table>
 							<tr>
-								<td align = "center"><p>상대 이름을 써주세요</p></td>
+								<td align = "center"><p>상대방 이름</p></td>
 								<td><input type="text" name="you"></td>
 							</tr>
 							
 							<tr>
 								<td align = "center"><p>파일선택 :</p></td>
 								<td><input type="file" name="file" id = "file"></td>
-								<td><input type="button" onclick="confirm1()" value="확인"> </td>
 							</tr>
 						</table>
 						
@@ -76,8 +75,8 @@ video {
 				<script type="text/javascript">
 				
 				
-				function confirm1(){ //확장자가 txt 인지 확인해주는 함수
-					
+							
+				function check(){
 					
 					var FileTag = document.getElementById("file");
 					var commaIndex = FileTag.value.indexOf(".");
@@ -85,17 +84,16 @@ video {
 					var extension = FileTag.value.substring(commaIndex, filelen);
 					
 					if (extension!='.txt'){
+						
 						alert("확장자가 txt인 텍스트 파일만 업로드 가능합니다");
 						FileTag.focus()
+						return false;
 						
 					}else{
-						alert("업로드 완료");
+						document.form.submit;
 					}
-				
-					
 					
 				}
-				
 				
 				
 				

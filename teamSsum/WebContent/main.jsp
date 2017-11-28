@@ -68,7 +68,7 @@ video{
 						<c:otherwise>
 							<li><a href="Logout.jsp">Logout</a></li>
 							<li><a href="update.jsp">회원정보수정</a>
-							<li><a href="report.jsp">보고서</a></li>
+							<li><a href="report_fileUpload.jsp">보고서</a></li>
 							<li><a href="advice.jsp">조언</a></li>
 							<li><a href="recommendation.jsp">추천</a></li>
 							<li><a href="greenright.jsp">그린라이트</a></li>
@@ -77,6 +77,7 @@ video{
 				</ul>
 			</nav>
 		</header>
+
 
 		<!-- Footer -->
 		<footer id="footer">
