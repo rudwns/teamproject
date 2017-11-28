@@ -21,7 +21,7 @@ public class MovieDAO {
 	private String sql;
 	private MovieDTO M_dto;
 	
-	public void getConnection() throws Exception { //db연결 메소드
+	public void getConnection() throws Exception { // db연결 메소드
 		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
 		Properties p = new Properties();
 		p.load(in);
@@ -33,6 +33,7 @@ public class MovieDAO {
 		Class.forName(p.getProperty("dbclass"));
 		conn = DriverManager.getConnection(url, dbid, dbpw);
 	}
+
 	
 	public void close() throws Exception {
 		if (rs != null)

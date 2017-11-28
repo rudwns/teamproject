@@ -1,10 +1,12 @@
 package com.model;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Properties;
 
 public class RestoDAO {
 	
@@ -19,15 +21,19 @@ public class RestoDAO {
 	private String sql;
 	private ShowDTO S_dto;
 	
-	public void getConnection() throws Exception {
-		url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-		db_Id = "web";
-		db_Pw = "123";
-		className = "oracle.jdbc.driver.OracleDriver";
+	public void getConnection() throws Exception { // db연결 메소드
+		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
+		Properties p = new Properties();
+		p.load(in);
 
-		Class.forName(className);
-		conn = DriverManager.getConnection(url, db_Id, db_Pw);
+		String url = p.getProperty("dburl");
+		String dbid = p.getProperty("dbid");
+		String dbpw = p.getProperty("dbpw");
+
+		Class.forName(p.getProperty("dbclass"));
+		conn = DriverManager.getConnection(url, dbid, dbpw);
 	}
+
 	
 	public void close() throws Exception {
 		if (rs != null)
