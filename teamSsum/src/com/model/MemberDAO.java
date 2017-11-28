@@ -26,7 +26,7 @@ public class MemberDAO {
 	
 	public void getConnection() throws Exception {
 		url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-		db_Id = "system";
+		db_Id = "web";
 		db_Pw = "123";
 		className = "oracle.jdbc.driver.OracleDriver";
 		
