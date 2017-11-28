@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class ShowDAO {
+public class MovieDAO {
 	
 	private String url;
 	private String db_Id;
@@ -19,7 +19,7 @@ public class ShowDAO {
 	private ResultSet rs;
 	private int cnt;
 	private String sql;
-	private ShowDTO S_dto;
+	private MovieDTO M_dto;
 	
 	public void getConnection() throws Exception { //db연결 메소드
 		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
@@ -43,25 +43,23 @@ public class ShowDAO {
 			conn.close();
 	}
 	
-public ArrayList<ShowDTO> selectShopAll() throws Exception{
+public ArrayList<MovieDTO> selectMovieAll() throws Exception{
 		
 		getConnection();
 		
-		ArrayList<ShowDTO> tmpshowList = new ArrayList<ShowDTO>();
+		ArrayList<MovieDTO> tmpMovieList = new ArrayList<MovieDTO>();
 		
-		sql = "select * from Show";
+		sql = "select * from movie";
 		pst = conn.prepareStatement(sql);
 		rs = pst.executeQuery();
 		
 		while(rs.next()) {
-			tmpshowList.add(new ShowDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+			tmpMovieList.add(new MovieDTO(rs.getString(1), rs.getString(2)));
 		}
 		
 		close();
-		return tmpshowList; 
+		return tmpMovieList; 
 	}
-	
-	
 	
 
 }

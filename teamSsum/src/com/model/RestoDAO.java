@@ -1,14 +1,12 @@
 package com.model;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Properties;
 
-public class ShowDAO {
+public class RestoDAO {
 	
 	private String url;
 	private String db_Id;
@@ -21,17 +19,14 @@ public class ShowDAO {
 	private String sql;
 	private ShowDTO S_dto;
 	
-	public void getConnection() throws Exception { //db연결 메소드
-		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
-		Properties p = new Properties();
-		p.load(in);
+	public void getConnection() throws Exception {
+		url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		db_Id = "web";
+		db_Pw = "123";
+		className = "oracle.jdbc.driver.OracleDriver";
 
-		String url = p.getProperty("dburl");
-		String dbid = p.getProperty("dbid");
-		String dbpw = p.getProperty("dbpw");
-
-		Class.forName(p.getProperty("dbclass"));
-		conn = DriverManager.getConnection(url, dbid, dbpw);
+		Class.forName(className);
+		conn = DriverManager.getConnection(url, db_Id, db_Pw);
 	}
 	
 	public void close() throws Exception {
@@ -43,18 +38,18 @@ public class ShowDAO {
 			conn.close();
 	}
 	
-public ArrayList<ShowDTO> selectShopAll() throws Exception{
+public ArrayList<RestoDTO> selectAll() throws Exception{
 		
 		getConnection();
 		
-		ArrayList<ShowDTO> tmpshowList = new ArrayList<ShowDTO>();
+		ArrayList<RestoDTO> tmpshowList = new ArrayList<RestoDTO>();
 		
-		sql = "select * from Show";
+		sql = "select * from restov5";
 		pst = conn.prepareStatement(sql);
 		rs = pst.executeQuery();
 		
 		while(rs.next()) {
-			tmpshowList.add(new ShowDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+			tmpshowList.add(new RestoDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)));
 		}
 		
 		close();
