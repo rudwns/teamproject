@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -41,37 +40,33 @@ video {
 		</video>
 
 
+		<%-- 	로그인 한 사용자 정보 불러옴 
+	<%
+		String nick = (String)session.getAttribute("nick");
+		System.out.println(nick);
+		MemberDAO m_dao = MemberDAO.getInstance();
+		MemberDTO m_dto = m_dao.selectMember(nick);
+		pageContext.setAttribute("member", m_dto);
+	%>  --%>
+		<!-- Main -->
 		<div id="main">
 			<!-- Info -->
 			<article id="Login" class="active">
-				<h2 class="major">파일업로드</h2>
-
-				<form action="FileuploadService" method="post" enctype="multipart/form-data">
-
-					<fieldset>
-						<legend align="center">마음이 궁금한 상대와의 대화 파일(.txt)을 선택해주세요</legend>
-
-						<table>
-							<tr>
-								<td align = "center"><p>상대 이름을 써주세요</p></td>
-								<td><input type="text" name="you"></td>
-							</tr>
-							
-							<tr>
-								<td align = "center"><p>파일선택 :</p></td>
-								<td><input type="file" name="file"></td>
-							</tr>
-
-						</table>
-					</fieldset>
+				<h2 class="major">분석</h2>
+				
+					<div class="field half" style="margin-left: 0;">
+						<label for="id">호감도 분석</label> <input type="text"
+							value="가나다라마바사아자차카타차파하라마바사아자차카타차파하"
+							name="id" readonly="readonly" />
+					</div>
+					
 
 					<ul class="actions">
-						<li><input type="submit" value="분석하기▶" class="special" /></li>
+						<li><input type="submit" value="Update" class="special" /></li>
 						<li><input type="button" value="Cancel"
 							onclick="location.href='main.jsp'" /></li>
 					</ul>
 				</form>
-
 			</article>
 		</div>
 	</div>
