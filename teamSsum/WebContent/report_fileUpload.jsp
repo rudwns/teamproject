@@ -59,10 +59,11 @@ video {
 							
 							<tr>
 								<td align = "center"><p>파일선택 :</p></td>
-								<td><input type="file" name="file"></td>
+								<td><input type="file" name="file" id = "file"></td>
+								<td><input type="button" onclick="confirm1()" value="확인"> </td>
 							</tr>
-
 						</table>
+						
 					</fieldset>
 
 					<ul class="actions">
@@ -71,6 +72,34 @@ video {
 							onclick="location.href='main.jsp'" /></li>
 					</ul>
 				</form>
+				
+				<script type="text/javascript">
+				
+				
+				function confirm1(){ //확장자가 txt 인지 확인해주는 함수
+					
+					
+					var FileTag = document.getElementById("file");
+					var commaIndex = FileTag.value.indexOf(".");
+					var filelen = FileTag.value.length;
+					var extension = FileTag.value.substring(commaIndex, filelen);
+					
+					if (extension!='.txt'){
+						alert("확장자가 txt인 텍스트 파일만 업로드 가능합니다");
+						FileTag.focus()
+						
+					}else{
+						alert("업로드 완료");
+					}
+				
+					
+					
+				}
+				
+				
+				
+				
+				</script>
 
 			</article>
 		</div>

@@ -2,12 +2,14 @@ package com.model;
 
 public class weatherDTO {
 	String day;
+	String weather;
 	String min_temp;
 	String max_temp;
-	
-	public weatherDTO(String day, String min_temp, String max_temp) {
+
+	public weatherDTO(String day, String weather, String min_temp, String max_temp) {
 		super();
 		this.day = day;
+		this.weather = weather;
 		this.min_temp = min_temp;
 		this.max_temp = max_temp;
 	}
@@ -18,6 +20,14 @@ public class weatherDTO {
 
 	public void setDay(String day) {
 		this.day = day;
+	}
+
+	public String getWeather() {
+		return weather;
+	}
+
+	public void setWeather(String weather) {
+		this.weather = weather;
 	}
 
 	public String getMin_temp() {
@@ -35,4 +45,5 @@ public class weatherDTO {
 	public void setMax_temp(String max_temp) {
 		this.max_temp = max_temp;
 	}
+
 }
