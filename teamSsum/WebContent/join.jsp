@@ -36,7 +36,8 @@ input[type="radio"]{
 				<h2 class="major">JOIN</h2>
 				<form method="post" action="Join">
 					<div class="field half">
-						<label for="id">ID</label> <input type="text" name="id" id="name" style="padding:10px;"/>
+						<label for="id">ID</label>
+								<td><input type="text" name="id" id="name" style="padding:10px;"/></td>
 					</div>
 					<div class="field half">
 						<label for="pw">PW</label> <input type="text" name="pw" id="email" style="padding:10px;"/>
@@ -46,15 +47,13 @@ input[type="radio"]{
 							name="nick" id="email" style="padding:10px;"/>
 					</div>
 					<div class="field half">
-						<label for="personnumber">생년월일</label> 
-						<input type="date" name="email"id="personnumber" style="padding:10px; background-color: black "/>
+						<label for="personnumber">BIRTHDAY</label> 
+						<input type="text"name="personnumber" id="personnumber" style="padding:10px;"/>
 						
 					</div>
 					<div class="field half">
-						<label for="tel">성별</label> 
-							<input type="radio" name="tel"id="sex" style="opacity: 1;width:20px;height: 20px;border: 1px solid white;background-color: red;"/>남
-							<input type="radio" name="tel"id="sex" style="padding:10px;"/>여
-						<input type="radio"/>여
+						<label for="tel">SEX</label> 
+							<input type="text"name="sex" id="sex" style="padding:10px;"/>
 						
 					</div>
 

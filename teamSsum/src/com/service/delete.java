@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.MemberDAO;
 
@@ -14,8 +15,8 @@ import com.model.MemberDAO;
 public class delete extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String id = request.getParameter("id");
+		HttpSession session = request.getSession();
+		String id = (String) session.getAttribute("id");
 		
 		
 		
@@ -24,6 +25,7 @@ public class delete extends HttpServlet {
 			int cnt = dao.delete(id);
 			
 			if (cnt>0) {
+				session.invalidate();
 				response.sendRedirect("main.jsp");
 			}
 		} catch (Exception e) {
