@@ -24,10 +24,10 @@
 			<article id="Login" class="active">
 				<h2 class="major">Login</h2>
 				<form method="post" action="Login">
-					<div class="field half">
+					<div class="field half" style="margin-left: 0;">
 						<label for="id">ID</label> <input type="text" name="id" id="id" />
 					</div>
-					<div class="field half">
+					<div class="field half" style="margin-left: 0;">
 						<label for="pw">PW</label> <input type="password" name="pw" id="pw" />
 					</div>
 
