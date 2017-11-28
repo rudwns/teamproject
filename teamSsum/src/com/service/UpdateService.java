@@ -27,10 +27,10 @@ public class UpdateService extends HttpServlet {
 		String email = request.getParameter("email");
 		String tel = request.getParameter("tel");
 		
-		if(pw.equals("") || nick.equals("") || email.equals("") || tel.equals("")) {
+		/*if(pw.equals("") || nick.equals("") || email.equals("") || tel.equals("")) {
 			System.out.println("비었음");
 			moveURL = "main.jsp";
-		}else {
+		}else {*/
 			
 			MemberDAO m_dao = MemberDAO.getInstance();
 		
@@ -40,7 +40,7 @@ public class UpdateService extends HttpServlet {
 				
 				if(cnt>0) {
 					System.out.println("수정완료");
-					session.setAttribute("id", id);
+					session.setAttribute("nick", nick);
 					moveURL = "main.jsp";
 				}else{
 					System.out.println("수정실패");
@@ -49,7 +49,7 @@ public class UpdateService extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
+		/*}*/
 		response.sendRedirect(moveURL);
 	
 	}
