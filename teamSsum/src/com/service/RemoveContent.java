@@ -26,7 +26,7 @@ public class RemoveContent extends HttpServlet {
 			
 			if(cnt>0){
 				System.out.println("삭제성공");
-				moveUrl = "board.jsp";
+				moveUrl = "greenright.jsp";
 			}else {
 				System.out.println("삭제실패");
 				moveUrl = "content.jsp";

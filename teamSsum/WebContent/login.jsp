@@ -25,10 +25,10 @@
 				<h2 class="major">Login</h2>
 				<form method="post" action="Login">
 					<div class="field half" style="margin-left: 0;">
-						<label for="id">ID</label> <input type="text" name="id" id="id" />
+						<label for="id">ID</label> <input type="text" name="id" id="id" style="padding:10px;"/>
 					</div>
 					<div class="field half" style="margin-left: 0;">
-						<label for="pw">PW</label> <input type="password" name="pw" id="pw" />
+						<label for="pw">PW</label> <input type="password" name="pw" id="pw" style="padding:10px;"/>
 					</div>
 
 					<ul class="actions">

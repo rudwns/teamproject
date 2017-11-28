@@ -29,7 +29,7 @@ public class UpdateContent extends HttpServlet {
 			
 			if(cnt>0) {
 				System.out.println("성공");
-				moveUrl ="board.jsp";
+				moveUrl ="greenright.jsp";
 			}else {
 				System.out.println("실패");
 				moveUrl ="content.jsp";

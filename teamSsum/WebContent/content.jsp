@@ -37,7 +37,7 @@
 
 					<ul class="actions">
 						<li><input type="submit" value="Update" class="special" /></li>
-						<li><input type="button" value="Cancel" onclick="location.href='board.jsp'" /></li>
+						<li><input type="button" value="Cancel" onclick="location.href='greenright.jsp'" /></li>
 					</ul>
 				</form>
 				<form action="RemoveContent">

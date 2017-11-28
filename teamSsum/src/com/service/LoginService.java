@@ -28,6 +28,7 @@ public class LoginService extends HttpServlet {
 			if(id.equals(dto.getId()) && pw.equals(dto.getPw())) {
 				HttpSession session = request.getSession();
 				session.setAttribute("nick", dto.getNick());
+				session.setAttribute("id", id);
 				
 				System.out.println("로그인 성공!");
 				moveURL = "main.jsp";

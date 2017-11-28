@@ -29,8 +29,8 @@ public class WriteService extends HttpServlet {
 				cnt = dao.insertBoard(title, writer, content);
 				
 				if(cnt>0) {
-					System.out.println("성공");
-					moveUrl = "board.jsp";
+					System.out.println("11");
+					moveUrl = "greenright.jsp";
 				}else {
 					System.out.println("실패");
 					moveUrl = "main.jsp";
