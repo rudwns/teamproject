@@ -7,6 +7,7 @@ CREATE TABLE show(
 
 create table week_weather(
 	day VARCHAR2(20), 
+	WEATHER VARCHAR2(20), 
 	MIN_TEMP VARCHAR2(20), 
 	MAX_TEMP VARCHAR2(20)
   );

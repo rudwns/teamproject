@@ -52,7 +52,7 @@ public class weatherDAO {
 		rs = pst.executeQuery();
 
 		while (rs.next()) {
-			weather_List.add(new weatherDTO(rs.getString(1), rs.getString(2), rs.getString(3)));
+			weather_List.add(new weatherDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
 		}
 
 		close();
