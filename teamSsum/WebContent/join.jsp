@@ -3,6 +3,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<style type="text/css">
+input[type="radio"]{
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background-color : blue;
+    cursor:pointer;
+}
+</style>
 <title>Dimension by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -37,11 +48,14 @@
 					<div class="field half">
 						<label for="personnumber">생년월일</label> 
 						<input type="date" name="email"id="personnumber" style="padding:10px; background-color: black "/>
+						
 					</div>
 					<div class="field half">
 						<label for="tel">성별</label> 
-						<input type="radio" name="tel"id="sex" style="padding:10px; "/>
-						<input type="radio" name="tel"id="sex" style="padding:10px;"/>
+							<input type="radio" name="tel"id="sex" style="opacity: 1;width:20px;height: 20px;border: 1px solid white;background-color: red;"/>남
+							<input type="radio" name="tel"id="sex" style="padding:10px;"/>여
+						<input type="radio"/>여
+						
 					</div>
 
 					<ul class="actions">

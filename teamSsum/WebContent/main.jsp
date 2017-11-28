@@ -52,7 +52,7 @@ video{
 							<h2>로그인 해주세요.</h2>
 						</c:when>
 						<c:otherwise>
-							<%-- <h2>${sessionScope.nick}님 환영합니다</h2> --%>
+							<h2>${sessionScope.nick}님 환영합니다</h2> 
 							<h2>${sessionScope.id}님 환영합니다.</h2>
 						</c:otherwise>
 					</c:choose>
