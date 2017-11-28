@@ -26,8 +26,10 @@ video{
 	width : auto;
 	height : auto;
 	z-index : -1;
-
 }
+ #main #Login {
+       background-color: rgba(240,226,208,0.85)
+      }
 </style>
 </head>
 <body class="is-article-visible">
@@ -42,38 +44,11 @@ video{
 		<div id="main">
 			<!-- Search -->
 			<article id="Login" class="active">
-				<h2 class="major">Search</h2>
-				<table>
-					<tr>
-						<td>Title</td>
-						<td>Author</td>
-						<td>Publisher</td>
-						<td>Rental</td>
-					</tr>
-					<%
-						BookDAO rental_dao = BookDAO.getInstance();
-						ArrayList<BookDTO> rental_dto = rental_dao.selectBookAll(0);
-						pageContext.setAttribute("book_list", rental_dto);
-					%>
-					<c:choose>
-						<c:when test="${empty pageScope.book_list }">
-							<tr>
-								<td colspan="4" align="center">대여할 도서가 존재하지 않습니다.</td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<c:forEach items="${pageScope.book_list}" var="book">
-								<tr>
-									<td>${book.title }</td>
-									<td>${book.author }</td>
-									<td>${book.publisher }</td>
-									<td><a href="Rental?book_num=${book.num}">대여</a></td>
-								</tr>
-							</c:forEach>
-						</c:otherwise>
-					</c:choose>
-
-				</table>
+				<h2 class="major">조언</h2>
+				<div class="field half" style="margin-left:0;">
+						<label for="nickname">추천대화시간</label>
+						<input type="text" value="${pageScope.member.nick}" name="nick" readonly="readonly" />
+					</div>
 				<ul class="actions">
 					<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" /></li>
 				</ul>

@@ -16,79 +16,84 @@
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <style type="text/css">
-video{
-	position : fixed;
-	top : 0;
-	left : 0;
+video {
+	position: fixed;
+	top: 0;
+	left: 0;
 	min-width: 100%;
 	min-height: 100%;
-	width : auto;
-	height : auto;
-	z-index : -1;
-
+	width: auto;
+	height: auto;
+	z-index: -1;
 }
- #main #Login {
-      background-color: rgba(243,181,184,0.85)
-      } 
-  
+
+#main #Login {
+	background-color: rgba(243, 181, 184, 0.85)
+}
+
+
+
+
+
 </style>
 </head>
 <body class="is-article-visible">
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-	 <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
-               <source src="movie3.mp4" type="video/mp4">
-               <source src="movie.webm" type="moive/webm">
-            </video> 
-            
-	
-	<%-- 	로그인 한 사용자 정보 불러옴 
-	<%
-		String nick = (String)session.getAttribute("nick");
-		System.out.println(nick);
-		MemberDAO m_dao = MemberDAO.getInstance();
-		MemberDTO m_dto = m_dao.selectMember(nick);
-		pageContext.setAttribute("member", m_dto);
-	%>  --%>
+		<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
+			volume="Mute">
+			<source src="movie3.mp4" type="video/mp4">
+			<source src="movie.webm" type="moive/webm">
+		</video>
+
+
+		
 		<!-- Main -->
 		<div id="main">
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">보고서</h2>
-				<form method="post" action="update.jsp">
+				
 					<div class="field half" style="margin-left: 0;">
-						<label for="id">호감도 분석</label> <input type="text" value="가나다라마바사아자차카타차파하가나다라마바사아자차카타차파하가나다라마바사아자차카타차파하가나다라마바사아자차카타차파하가나다라마바사아자차카타차파하가나다라마바사아자차카타차파하" name="id" readonly="readonly" />
+						<label for="id">호감도 분석</label> 
+						<input type="text"value="hello" name="id" readonly="readonly" style="width: 100%"/>
 					</div>
-			<!-- 		<div class="field half">
+					<!-- 		<div class="field half">
 						<label for="pw">PW</label> <input type="password" name="pw"	id="pw" />
 					</div> -->
-					<div class="field half" style="margin-left:0;">
-						<label for="nickname">상대방의 감정상태</label> <input type="text" value="${pageScope.member.nick}" name="nick" readonly="readonly" />
+					<div class="field half" style="margin-left: 0;">
+						<label for="nickname">상대방의 감정상태</label>
+						<input type="text"value="${pageScope.member.nick}" name="nick" readonly="readonly" style="width: 100%"/>
 					</div>
 					<div class="field half" style="margin-left: 0;">
-						<label for="email">우리의 단어구름</label> <input type="text"	value="${pageScope.member.email}" name="email" readonly="readonly" />
+						<label for="email">우리의 단어구름</label> 
+						<input type="text"value="${pageScope.member.email}" name="email"readonly="readonly" style="width: 100%"/>
 					</div>
 					<div class="field half" style="margin-left: 0;">
-						<label for="tel">상대방의 대화주제</label> <input type="text"	value="${pageScope.member.tel}" name="tel" readonly="readonly" />
+						<label for="tel">상대방의 대화주제</label> <input type="text"
+							value="${pageScope.member.tel}" name="tel" readonly="readonly" style="width: 100%"/>
 					</div>
 					<div class="field half" style="margin-left: 0;">
-						<label for="tel">상대방과 나의 대화주제</label> <input type="text"	value="${pageScope.member.tel}" name="tel" readonly="readonly" />
+						<label for="tel">상대방과 나의 대화주제</label> <input type="text"
+							value="${pageScope.member.tel}" name="tel" readonly="readonly" style="width: 100%" />
 					</div>
 					<div class="field half" style="margin-left: 0;">
-						<label for="tel">우리의 평균 답장시간</label> <input type="text"	value="${pageScope.member.tel}" name="tel" readonly="readonly" />
+						<label for="tel">우리의 평균 답장시간</label> <input type="text"
+							value="${pageScope.member.tel}" name="tel" readonly="readonly" style="width: 100%"/>
 					</div>
-					
+
 					<ul class="actions">
 						<li><input type="submit" value="Update" class="special" /></li>
-						<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" /></li>
+						<li><input type="button" value="Cancel"
+							onclick="location.href='main.jsp'" /></li>
 					</ul>
 				</form>
 			</article>
 		</div>
 	</div>
 	<!-- BG -->
-	<div id="bg"></div> 
+	<!-- <div id="bg"></div> -->
 </body>
 </html>
 
