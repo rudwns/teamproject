@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 public class ShowDAO {
-	
+
 	private String url;
 	private String db_Id;
 	private String db_Pw;
@@ -20,8 +20,8 @@ public class ShowDAO {
 	private int cnt;
 	private String sql;
 	private ShowDTO S_dto;
-	
-	public void getConnection() throws Exception { //db연결 메소드
+
+	public void getConnection() throws Exception { // db연결 메소드
 		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
 		Properties p = new Properties();
 		p.load(in);
@@ -33,7 +33,7 @@ public class ShowDAO {
 		Class.forName(p.getProperty("dbclass"));
 		conn = DriverManager.getConnection(url, dbid, dbpw);
 	}
-	
+
 	public void close() throws Exception {
 		if (rs != null)
 			rs.close();
@@ -42,7 +42,7 @@ public class ShowDAO {
 		if (conn != null)
 			conn.close();
 	}
-	
+
 public ArrayList<ShowDTO> selectShopAll() throws Exception{
 		
 		getConnection();
@@ -53,15 +53,20 @@ public ArrayList<ShowDTO> selectShopAll() throws Exception{
 		pst = conn.prepareStatement(sql);
 		rs = pst.executeQuery();
 		
+		ShowDTO svo = null;
+		
 		while(rs.next()) {
+			
+			svo = new ShowDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+			
+			if(svo.getTitle().contains("어린이")==false && svo.getTitle().contains("가족")==false){
+			
 			tmpshowList.add(new ShowDTO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
 		}
+			}
 		
 		close();
 		return tmpshowList; 
 	}
-	
-	
-	
 
 }
