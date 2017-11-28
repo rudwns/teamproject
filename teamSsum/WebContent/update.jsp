@@ -25,9 +25,9 @@
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">Update</h2>
-				<form method="post" action="Update">
+				<form method="post" action="UpdateService">
 					<div class="field half">
-						<label for="id">ID</label> <input type="text" value="${param.id }" name="id" readonly="readonly" />
+						<label for="id">ID</label> <input type="text" value="${id}" name="id" readonly="readonly" />
 					</div>
 					<div class="field half">
 						<label for="pw">PW</label> <input type="password" name="pw"	/>

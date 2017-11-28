@@ -22,25 +22,26 @@
 		<div id="main">
 			<!-- Login -->
 			<article id="Login" class="active">
-				<h2 class="major">Login</h2>
+				<h2 class="major">JOIN</h2>
 				<form method="post" action="Join">
 					<div class="field half">
-						<label for="id">ID</label> <input type="text" name="id" id="name" />
+						<label for="id">ID</label> <input type="text" name="id" id="name" style="padding:10px;"/>
 					</div>
 					<div class="field half">
-						<label for="pw">PW</label> <input type="text" name="pw" id="email" />
+						<label for="pw">PW</label> <input type="text" name="pw" id="email" style="padding:10px;"/>
 					</div>
 					<div class="field half">
 						<label for="nickname">NICKNAME</label> <input type="text"
-							name="nick" id="email" />
+							name="nick" id="email" style="padding:10px;"/>
 					</div>
 					<div class="field half">
-						<label for="email">EMAIL</label> <input type="text" name="email"
-							id="email" />
+						<label for="personnumber">생년월일</label> 
+						<input type="date" name="email"id="personnumber" style="padding:10px; background-color: black "/>
 					</div>
 					<div class="field half">
-						<label for=""tel"">TEL</label> <input type="text" name="tel"
-							id="email" />
+						<label for="tel">성별</label> 
+						<input type="radio" name="tel"id="sex" style="padding:10px; "/>
+						<input type="radio" name="tel"id="sex" style="padding:10px;"/>
 					</div>
 
 					<ul class="actions">

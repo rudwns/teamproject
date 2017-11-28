@@ -40,7 +40,7 @@ public class UpdateService extends HttpServlet {
 				
 				if(cnt>0) {
 					System.out.println("수정완료");
-					session.setAttribute("nick", nick);
+					session.setAttribute("id", id);
 					moveURL = "main.jsp";
 				}else{
 					System.out.println("수정실패");

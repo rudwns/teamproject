@@ -121,7 +121,7 @@
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: aÆæ±Û¾¾L;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -371,7 +371,7 @@
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 5rem 1rem 5rem 1rem ;
+		padding: 10% ;
 		text-decoration: none;
 		width: 100%;
 	}
@@ -456,7 +456,7 @@
 		margin-right: -2rem;
 		opacity: 0;
 		width: 1rem;
-		z-index: -1;
+		z-index: 1;
 	}
 
 		input[type="checkbox"] + label,

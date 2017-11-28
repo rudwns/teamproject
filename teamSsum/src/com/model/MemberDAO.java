@@ -44,7 +44,7 @@ public class MemberDAO {
 		
 		getConnection();
 		
-		sql = "select * from book_member where nickname=?";
+		sql = "select * from book_member where id=?";
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, nick);
 		

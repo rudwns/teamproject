@@ -38,7 +38,7 @@ public class Content extends HttpServlet {
 				request.setAttribute("dto", dto);
 				moveUrl = "content.jsp";
 			}else {
-				moveUrl = "board.jsp";
+				moveUrl = "greenright.jsp";
 			}
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(moveUrl);

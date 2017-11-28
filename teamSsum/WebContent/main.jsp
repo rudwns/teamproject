@@ -66,6 +66,7 @@ video{
 						</c:when>
 						<c:otherwise>
 							<li><a href="Logout.jsp">Logout</a></li>
+							<li><a href="update.jsp">회원정보수정</a>
 							<li><a href="report.jsp">보고서</a></li>
 							<li><a href="advice.jsp">조언</a></li>
 							<li><a href="recommendation.jsp">추천</a></li>
