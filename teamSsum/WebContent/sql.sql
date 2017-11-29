@@ -8,11 +8,12 @@ CREATE TABLE show(
 select * from show
 
 CREATE TABLE movie(
-    title VARCHAR2(100),
-    image VARCHAR2(100)
+    title VARCHAR2(200),
+    image VARCHAR2(200)
 );
 
 select * from movie
+
 
 create table week_weather(
 	day VARCHAR2(20), 
@@ -20,6 +21,8 @@ create table week_weather(
 	MIN_TEMP VARCHAR2(20), 
 	MAX_TEMP VARCHAR2(20)
   );
+  
+
   
 select * from week_weather
   
