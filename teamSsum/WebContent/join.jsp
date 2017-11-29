@@ -12,6 +12,7 @@ input[type="radio"] {
 	vertical-align: middle;
 	background-color: blue;
 	cursor: pointer;
+	
 }
 </style>
 <title>Dimension by HTML5 UP</title>
@@ -23,6 +24,7 @@ input[type="radio"] {
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
+
 </head>
 <body class="is-article-visible">
 
@@ -45,6 +47,12 @@ input[type="radio"] {
 						<label for="pw">PW</label> <input type="text" name="pw" id="pw"
 							style="padding: 10px;" />
 					</div>
+					
+					<div class="field half">
+						<label for="pw">PW확인</label> <input type="text" name="pw" id="pw2"
+							style="padding: 10px;" />
+					</div>
+					
 					<div class="field half">
 						<label for="nickname">NICKNAME</label> <input type="text"
 							name="nick" id="nick" style="padding: 10px;" />
@@ -58,13 +66,9 @@ input[type="radio"] {
 
 					</div>
 					<div class="field half">
-
-						<label for="tel">성별</label> <input type="radio" name="tel"
-							id="sex"
-							style="opacity: 1; width: 20px; height: 20px; border: 1px solid white; background-color: red;" />남
-						<input type="radio" name="tel" id="sex" style="padding: 10px;" />여
-						<input type="radio" />여
-
+						성별 
+						<input type="radio" name="gen" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
+						<input type="radio" name="gen" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
 
 					</div>
 
@@ -76,11 +80,12 @@ input[type="radio"] {
 				</form>
 
 				<script type="text/javascript">
-				
+					
 				
 					function check() {
 						var idTag = document.getElementById("id");
 						var pwTag = document.getElementById("pw");
+						var pwTag2 = document.getElementById("pw2");
 						var nickTag = document.getElementById("nick");
 						var birthTag = document.getElementById("personnumber");
 						var sexTag = document.getElementById("sex");
@@ -90,17 +95,36 @@ input[type="radio"] {
 							alert("아이디를 입력해주세요.");
 							idTag.focus();
 							return false;
-						} else {
-							document.form.submit;
-						}
+						} 
 				
+						//아이디 영문 소문자, 숫자만 사용 5자 이상 
+						var regex1 = /[a-z|0-9]{5,}/;
+						
+						//비밀번호&이메일  영문 대문자 혹은 소문자 혹은 숫자 포함 6자 이상
+						var regex2 = /[a-z|A-Z|0-9]{6,}/;
+						
+						if(regex1.test(id.value)==false){
+							alert("아이디 영문 소문자, 숫자만 사용 5자 이상 입력해주세요.");
+							return false;				
+						}
+						
 				
 						if (pwTag.value == "") {
 							alert("비밀번호를 입력해주세요.");
 							pwTag.focus();
 							return false;
-						} else {
-							document.form.submit;
+						}
+						
+						if (pwTag2.value == "") {
+							alert("비밀번호를 확인해주세요.");
+							pwTag2.focus();
+							return false;
+						}
+						
+						if(pwTag.value != pwTag2.value){
+							alert("위 비밀번호와 일치하지 않습니다.");
+							pwTag2.focus();
+							return false;
 						}
 				
 				
@@ -108,17 +132,13 @@ input[type="radio"] {
 							alert("닉네임을 입력해주세요.");
 							nickTag.focus();
 							return false;
-						} else {
-							document.form.submit;
-						}
+						} 
 				
 						if (birthTag.value == "") {
 							alert("생년월일을 입력해주세요.");
 							birthTag.focus();
 							return false;
-						} else {
-							document.form.submit;
-						}
+						} 
 				
 				
 						if (sexTag.value == "") {
