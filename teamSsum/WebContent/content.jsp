@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -26,26 +27,41 @@
 					<input type="hidden" name="num" value="${dto.num}">
 					
 					<div class="field half" style="float:left;">
-						<label for="nickname">NICKNAME</label> <input type="text" value="${nick}" name="nick" readonly="readonly" />
+						<label for="nickname">NICKNAME</label> 
+						<input type="text" value="${nick}" name="nick" readonly="readonly" />
 					</div>
 					<div class="field half" style="float:left;">
-						<label for="title">Title</label> <input type="text" name="title" value="${dto.title}"/>
+						<label for="title">Title</label> 
+						<input type="text" name="title" value="${dto.title}" readonly="readonly"/>
 					</div>
 					<div class="field half" style="clear:both; width: 560px;">
-						<label for="content">content</label><textarea cols="7" rows="4" name="content" >${dto.content}</textarea>
+						<label for="content">content</label>
+						<textarea cols="7" rows="4" name="content" >${dto.content}</textarea>
 					</div>
 
 					<ul class="actions">
+						<li><a href="Content?num=${list.num}">${list.title }</a></li>
 						<li><input type="submit" value="Update" class="special" /></li>
 						<li><input type="button" value="Cancel" onclick="location.href='greenright.jsp'" /></li>
 					</ul>
 				</form>
+				
+				
 				<form action="RemoveContent">
+				
 					<input type="hidden" name="num" value="${dto.num}">
 					<ul class="actions">
 						<li><input type="submit" value="Delete" class="special" /></li>
 					</ul>
 				</form>
+				
+				<form action="likeer?num=${list.num}">
+					
+					<input type="hidden" name="num" value="${dto.num}">
+					<input type="submit" value="LIKE" style="top: 20px; left: 20px;"/>
+					
+				</form>
+				
 			</article>
 		</div>
 	</div>

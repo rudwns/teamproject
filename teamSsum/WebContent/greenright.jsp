@@ -88,6 +88,7 @@ video{
 					<c:forEach items="${list }" var="list">
 						<tr align="center">
 							<td>${list.num }</td>
+							<!-- 여기서 누르면 content로 넘어가서 hit 값이 증가한다. -->
 							<td><a href="Content?num=${list.num}">${list.title }</a></td>
 							<td>${list.nick }</td>
 							<td>${list.day }</td>

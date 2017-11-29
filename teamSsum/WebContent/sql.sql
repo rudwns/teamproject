@@ -75,8 +75,10 @@ create table board(
 	nickname varchar(50),
 	content varchar(200),
 	day date,
-	hit number
+	hit number,
+	likeer number
 )
+
 delete from board;
 select * from board;
 drop table board;

@@ -68,18 +68,7 @@ public class BoardDAO {
 		return cnt; 
 	}
 	
-	public void updateHit(int num) throws Exception {
-		
-		getConnection();
-		//조회수 증가
-		sql = "update board set hit=hit+1 where num=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1, num);
-		
-		cnt = pst.executeUpdate();
-		close();
-		
-	}
+	
 	
 	public BoardDTO selectBoardOne(int num) throws Exception{
 		
@@ -167,6 +156,25 @@ public class BoardDAO {
 		
 		close();
 		return cnt;
+	}
+	
+	public void updateHit(int num) throws Exception {
+		
+		getConnection();
+		//조회수 증가
+		sql = "update board set hit=hit+1 where num=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1, num);
+		
+		cnt = pst.executeUpdate();
+		close();
+		
+	}
+	public void likeer(int num) throws Exception{
+		getConnection();
+		//좋아요 증가
+		
+		
 	}
 
 }
