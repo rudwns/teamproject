@@ -1,3 +1,4 @@
+<%@page import="com.connect.python_connection"%>
 <%@page import="com.model.BookDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.BookDAO"%>
@@ -58,6 +59,9 @@ video{
 </head>
 <body class="is-article-visible">
 	<%
+	
+				python_connection pc = new python_connection();
+				pc.map_py();
 
 				RestoDAO dao = new RestoDAO();
 				ArrayList<RestoDTO> list = dao.selectAll();

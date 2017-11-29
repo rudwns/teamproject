@@ -1,18 +1,19 @@
 CREATE TABLE show(
-    title VARCHAR2(50),
-    place VARCHAR2(50),
-    days VARCHAR2 (50),
+    title VARCHAR2(100),
+    place VARCHAR2(100),
+    days VARCHAR2 (100),
     link VARCHAR2(100)
 );
 
 select * from show
 
 CREATE TABLE movie(
-    title VARCHAR2(100),
-    image VARCHAR2(100)
+    title VARCHAR2(200),
+    image VARCHAR2(200)
 );
 
 select * from movie
+
 
 create table week_weather(
 	day VARCHAR2(20), 
@@ -20,6 +21,8 @@ create table week_weather(
 	MIN_TEMP VARCHAR2(20), 
 	MAX_TEMP VARCHAR2(20)
   );
+  
+
   
 select * from week_weather
   
@@ -87,6 +90,7 @@ create sequence board_num
 start with 1
 increment by 1;
 
+
 create table review(
 	num number,
 	nickname varchar(50),
@@ -96,7 +100,21 @@ create table review(
 select * from review;
 delete from review;
 
+select * from restov5
 
+
+
+
+create table restov5(
+title varchar(80),
+mood varchar(200),
+address varchar(150),
+phone varchar(80),
+we varchar(130)
+
+);
+
+select * from restov5
 
 
 
