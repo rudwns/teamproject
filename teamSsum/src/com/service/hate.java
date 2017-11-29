@@ -13,18 +13,18 @@ import com.model.BoardDAO;
 import com.model.BoardDTO;
 
 
-@WebServlet("/likeer")
-public class likeer extends HttpServlet {
+@WebServlet("/hate")
+public class hate extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int num = Integer.parseInt(request.getParameter("num"));
-		System.out.println("넘겨받은 번호>> " + num);
+		System.out.println("넘겨받은 숫자 : "+num);
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		String moveUrl = "";
 		try {
-			dao.likeer(num);
+			dao.hate(num);
 			BoardDTO dto = dao.selectBoardOne(num);
 			
 			if (dto != null) {
@@ -41,5 +41,7 @@ public class likeer extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
+
 }

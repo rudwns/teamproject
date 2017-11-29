@@ -56,10 +56,15 @@
 				</form>
 				
 				<form action="likeer?num=${list.num}">
-					
+					<label for="content">${dto.likeer }</label>
 					<input type="hidden" name="num" value="${dto.num}">
 					<input type="submit" value="LIKE" style="top: 20px; left: 20px;"/>
 					
+				</form>
+				<form action="hate?num=${list.num}">
+					<label for="content">${dto.hate}</label>
+					<input type="hidden" name="num" value="${dto.num}">
+					<input type="submit" value="HATE" style="top: 20px; left: 20px;"/>
 				</form>
 				
 			</article>
