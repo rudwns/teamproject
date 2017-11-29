@@ -54,6 +54,7 @@ video{
 						<c:otherwise>
 							<h2>${sessionScope.nick}님 환영합니다</h2> 
 							
+							
 						</c:otherwise>
 					</c:choose>
 				</div>
