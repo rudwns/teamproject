@@ -38,6 +38,7 @@ public class Content extends HttpServlet {
 			if(dto != null) {
 				
 				session.setAttribute("num", num);
+				
 				request.setAttribute("dto", dto);
 				moveUrl = "content.jsp";
 			}else {
