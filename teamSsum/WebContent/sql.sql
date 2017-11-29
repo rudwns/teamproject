@@ -90,8 +90,20 @@ create sequence board_num
 start with 1
 increment by 1;
 
+select * from restov5
 
 
+
+create table restov5(
+title varchar(80),
+mood varchar(200),
+address varchar(150),
+phone varchar(80),
+we varchar(130)
+
+);
+
+select * from restov5
 
 
 
