@@ -1,3 +1,4 @@
+<%@page import="com.connect.python_connection"%>
 <%@page import="com.model.MovieDTO"%>
 <%@page import="com.model.MovieDAO"%>
 <%@page import="com.model.ShowDTO"%>
@@ -49,6 +50,9 @@ video {
 
 
 			<%
+				python_connection pc = new python_connection();
+				pc.movie_py();
+				
 				String nick = (String) session.getAttribute("nick");
 				MovieDAO mdao = new MovieDAO();
 				ArrayList<MovieDTO> marr = mdao.selectMovieAll();
@@ -98,6 +102,7 @@ video {
 
 			<p>[공연정보를 봐볼까요?]</p>
 			<%
+				pc.show_py();
 				ShowDAO dao = new ShowDAO();
 				ArrayList<ShowDTO> arr = dao.selectShopAll();
 				request.setAttribute("arr", arr);

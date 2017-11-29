@@ -1,7 +1,7 @@
 CREATE TABLE show(
-    title VARCHAR2(50),
-    place VARCHAR2(50),
-    days VARCHAR2 (50),
+    title VARCHAR2(100),
+    place VARCHAR2(100),
+    days VARCHAR2 (100),
     link VARCHAR2(100)
 );
 

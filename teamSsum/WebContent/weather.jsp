@@ -1,8 +1,7 @@
 <%@page import="com.model.weatherDAO"%>
 <%@page import="com.model.weatherDTO"%>
-<%@page import="com.model.ShowDTO"%>
+<%@page import="com.connect.python_connection"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.model.ShowDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -53,6 +52,8 @@ video {
 			<h2 class="major">³¯¾¾ Á¤º¸</h2>
 
 			<%
+			python_connection pc = new python_connection();
+			pc.weather_py();
 				String nick = (String) session.getAttribute("nick");
 				weatherDAO wdao = new weatherDAO();
 				ArrayList<weatherDTO> arr = wdao.weather_view();
