@@ -28,7 +28,7 @@
 					
 					<div class="field half" style="float:left;">
 						<label for="nickname">NICKNAME</label> 
-						<input type="text" value="${nick}" name="nick" readonly="readonly" />
+						<input type="text" value="${dto.nick}" name="nick" readonly="readonly" />
 					</div>
 					<div class="field half" style="float:left;">
 						<label for="title">Title</label> 
@@ -41,20 +41,23 @@
 
 					<ul class="actions">
 						<li><a href="Content?num=${list.num}">${list.title }</a></li>
-						<li><input type="submit" value="Update" class="special" /></li>
+						<c:if test="${nick==dto.nick}">
+							<li><input type="submit" value="Update" class="special" /></li>
+						</c:if>
 						<li><input type="button" value="Cancel" onclick="location.href='greenright.jsp'" /></li>
 					</ul>
 				</form>
 				
 				
 				<form action="RemoveContent">
-				
 					<input type="hidden" name="num" value="${dto.num}">
 					<ul class="actions">
-						<li><input type="submit" value="Delete" class="special" /></li>
+						<c:if test="${nick==dto.nick }">
+						<li><input type="submit" value="Delete" class="special" />
+						</c:if></li>
 					</ul>
 				</form>
-				
+				<c:if test="${nick != dto.nick }">
 				<form action="likeer?num=${list.num}">
 					<label for="content">${dto.likeer }</label>
 					<input type="hidden" name="num" value="${dto.num}">
@@ -66,7 +69,7 @@
 					<input type="hidden" name="num" value="${dto.num}">
 					<input type="submit" value="HATE" style="top: 20px; left: 20px;"/>
 				</form>
-				
+				</c:if>
 			</article>
 		</div>
 	</div>
