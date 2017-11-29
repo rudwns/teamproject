@@ -38,8 +38,10 @@ input[type="radio"] {
 				<h2 class="major">JOIN</h2>
 				<form id="form" onsubmit="return check()" method="post"	action="Join">
 					<div class="field half">
+
 						<label for="id">ID</label> <input type="text" name="id" id="id"
 							style="padding: 10px;" />
+
 					</div>
 					<div class="field half">
 						<label for="pw">PW</label> <input type="text" name="pw" id="pw"
@@ -56,9 +58,11 @@ input[type="radio"] {
 							name="nick" id="nick" style="padding: 10px;" />
 					</div>
 					<div class="field half">
+
 						<label for="personnumber">생년월일</label> <input type="date"
 							name="email" id="personnumber"
 							style="padding: 10px; background-color: black" />
+
 
 					</div>
 					<div class="field half">

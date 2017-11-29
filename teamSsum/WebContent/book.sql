@@ -14,14 +14,15 @@ create table week_weather(
 
 
 
-create table book_member(
-	id varchar(50) primary key,
-	pw varchar(50),
-	nickname varchar(50),
-	email varchar(50),
-	tel varchar(50)
-)
-select * from book_member;
+create table ssum_member(
+   id varchar(50) primary key,
+   pw varchar(50),
+   nickname varchar(50),
+   personnumber varchar(50),
+   sex varchar(50)
+
+);
+
 
 insert into book_member values('smart','1234','Admin','smart@smhrd.or.kr','062-350-1234');
 insert into book_member values('pkj','1234','haha','rudwns0810@naver.com','010-8929-1461');

@@ -108,6 +108,8 @@ public class MemberDAO {
 	public int join(String id, String pw, String nick, String personnumber, String sex) throws Exception{
 		getConnection();
 		
+		
+		
 		sql = "insert into ssum_member values(?,?,?,?,?)";
 		
 		pst = conn.prepareStatement(sql);
@@ -132,6 +134,7 @@ public class MemberDAO {
 		return cnt;
 	}
 
+	
 	
 	
 }
