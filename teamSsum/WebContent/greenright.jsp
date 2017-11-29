@@ -75,7 +75,6 @@ video{
 						<td>Num</td>
 						<td>Nick</td>
 						<td>Title</td>
-						
 						<td>Date</td>
 						<td>Hit</td>
 						<td>Like</td>

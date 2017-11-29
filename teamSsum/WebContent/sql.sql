@@ -87,6 +87,14 @@ create sequence board_num
 start with 1
 increment by 1;
 
+create table review(
+	num number,
+	nickname varchar(50),
+	day date,
+	content varchar(200)
+)
+select * from review;
+delete from review;
 
 
 
