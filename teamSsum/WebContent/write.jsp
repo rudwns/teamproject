@@ -33,13 +33,13 @@
 					</div>
 					<div class="field half" style="clear: both; width: 560px;">
 						<label for="content">content</label>
-						<textarea id="content" cols="7" rows="4" name="content"></textarea>
+						<textarea id="content" cols="9" rows="4" name="content"></textarea>
 					</div>
 
 					<ul class="actions">
+						
 						<li><input type="submit" value="Write" class="special" /></li>
-						<li><input type="button" value="Cancel"
-							onclick="location.href='greenright.jsp'" /></li>
+						<li><input type="button" value="Cancel" onclick="location.href='greenright.jsp'" /></li>
 					</ul>
 				</form>
 

@@ -73,25 +73,32 @@ video{
 				<table>
 					<tr align="center">
 						<td>Num</td>
+						<td>Nick</td>
 						<td>Title</td>
-						<td>Writer</td>
+						
 						<td>Date</td>
 						<td>Hit</td>
+						<td>Like</td>
+						<td>Hate</td>
 					</tr>
 					<c:choose>
 						<c:when test="${empty list }">
 							<tr>	
-								<td colspan="5" align="center">현재 게시글이 존재하지 않습니다.</td>
+								<td colspan="7" align="center">현재 게시글이 존재하지 않습니다.</td>
 							</tr>
 						</c:when>
 					</c:choose>
 					<c:forEach items="${list }" var="list">
 						<tr align="center">
 							<td>${list.num }</td>
-							<td><a href="Content?num=${list.num}">${list.title }</a></td>
 							<td>${list.nick }</td>
+							<!-- 여기서 누르면 content로 넘어가서 hit 값이 증가한다. -->
+							<td><a href="Content?num=${list.num}">${list.title }</a></td>
+							
 							<td>${list.day }</td>
 							<td>${list.hit }</td>
+							<td>${list.likeer }</td>
+							<td>${list.hate }</td>
 						</tr>
 					</c:forEach>
 

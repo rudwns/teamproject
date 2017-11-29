@@ -75,8 +75,10 @@ create table board(
 	nickname varchar(50),
 	content varchar(200),
 	day date,
-	hit number
+	hit number,
+	likeer number
 )
+alter table board add hate number;
 delete from board;
 select * from board;
 drop table board;
@@ -84,6 +86,8 @@ drop table board;
 create sequence board_num
 start with 1
 increment by 1;
+
+
 
 
 

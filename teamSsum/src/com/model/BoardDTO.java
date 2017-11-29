@@ -7,14 +7,18 @@ public class BoardDTO {
 	private String content;
 	private String day;
 	private int hit;
+	private int likeer;
+	private int hate;
 	
-	public BoardDTO(int num, String title, String nick, String content,String day, int hit) {
+	public BoardDTO(int num, String title, String nick, String content,String day, int hit, int likeer, int hate) {
 		this.num = num;
 		this.title = title;
 		this.nick = nick;
 		this.content = content;
 		this.day = day;
 		this.hit = hit;
+		this.likeer = likeer;
+		this.hate = hate;
 	}
 	
 	public int getNum() {
@@ -34,6 +38,14 @@ public class BoardDTO {
 	}
 	public int getHit() {
 		return hit;
+	}
+
+	public int getLikeer() {
+		return likeer;
+	}
+
+	public int getHate() {
+		return hate;
 	}
 	
 	

@@ -53,13 +53,15 @@ public class BoardDAO {
 		
 		getConnection();
 		
-		sql = "insert into board values(board_num.nextval,?,?,?,sysdate,?)";
+		sql = "insert into board values(board_num.nextval,?,?,?,sysdate,?,?,?)";
 		
 		pst = conn.prepareStatement(sql);
 		pst.setString(1, title);
 		pst.setString(2, writer);
 		pst.setString(3, content);
 		pst.setInt(4, 0);
+		pst.setInt(5, 0);
+		pst.setInt(6, 0);
 		
 		cnt = pst.executeUpdate();
 		
@@ -68,18 +70,7 @@ public class BoardDAO {
 		return cnt; 
 	}
 	
-	public void updateHit(int num) throws Exception {
-		
-		getConnection();
-		//조회수 증가
-		sql = "update board set hit=hit+1 where num=?";
-		pst = conn.prepareStatement(sql);
-		pst.setInt(1, num);
-		
-		cnt = pst.executeUpdate();
-		close();
-		
-	}
+	
 	
 	public BoardDTO selectBoardOne(int num) throws Exception{
 		
@@ -96,7 +87,7 @@ public class BoardDAO {
 		rs = pst.executeQuery();
 		
 		if(rs.next()) {
-			b_dto = new BoardDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
+			b_dto = new BoardDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8));
 			
 /*			System.out.println("번호: "+rs.getInt(1));
 			System.out.println("제목: "+rs.getString(2));
@@ -123,7 +114,7 @@ public class BoardDAO {
 		rs = pst.executeQuery();
 		
 		while(rs.next()) {
-			tmpList.add(new BoardDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6)));
+			tmpList.add(new BoardDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7), rs.getInt(8)));
 			
 /*			System.out.println("번호: "+rs.getInt(1));
 			System.out.println("제목: "+rs.getString(2));
@@ -167,6 +158,44 @@ public class BoardDAO {
 		
 		close();
 		return cnt;
+	}
+	
+	public void updateHit(int num) throws Exception {
+		
+		getConnection();
+		//조회수 증가
+		sql = "update board set hit=hit+1 where num=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1, num);
+		
+		cnt = pst.executeUpdate();
+		close();
+		
+	}
+	public void likeer(int num) throws Exception{
+		getConnection();
+		//좋아요 증가
+		sql = "update board set likeer=likeer+1 where num=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1, num);
+		
+		cnt = pst.executeUpdate();
+		close();
+		
+		
+	}
+
+	public void hate(int num) throws Exception{
+		getConnection();
+		//싫어요 증가
+		sql = "update board set hate=hate+1 where num=?";
+		pst = conn.prepareStatement(sql);
+		pst.setInt(1, num);
+		
+		cnt = pst.executeUpdate();
+		close();
+		
+		
 	}
 
 }
