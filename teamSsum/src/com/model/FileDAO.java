@@ -24,7 +24,7 @@ public class FileDAO {
 		return instance;
 	}
 	
-	public void getConnection() throws Exception { //db연결 메소드
+	public void getConnection() throws Exception { // db연결 메소드
 		InputStream in = (this.getClass().getResourceAsStream("../../../../db.properties"));
 		Properties p = new Properties();
 		p.load(in);
@@ -36,7 +36,7 @@ public class FileDAO {
 		Class.forName(p.getProperty("dbclass"));
 		conn = DriverManager.getConnection(url, dbid, dbpw);
 	}
-	
+
 	
 	public void close() throws Exception { // db 연결 끊는 메소듯
 		if (rs != null)
