@@ -36,10 +36,10 @@
 						<label for="nickname">NICKNAME</label> <input type="text" name="nick"/>
 					</div>
 					<div class="field half">
-						<label for="email">EMAIL</label> <input type="text"	name="email"/>
+						<label for="email">PERSONNUMEBER</label> <input type="text"	name="email"/>
 					</div>
 					<div class="field half">
-						<label for="tel">TEL</label> <input type="text"	name="tel"/>
+						<label for="tel">SEX</label> <input type="text"	name="tel"/>
 					</div>
 
 					<ul class="actions">

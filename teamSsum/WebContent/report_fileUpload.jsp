@@ -54,7 +54,7 @@ video {
 						<table>
 							<tr>
 								<td align = "center"><p>상대방 이름</p></td>
-								<td><input type="text" name="you"></td>
+								<td><input id = "you" type="text" name="you"></td>
 							</tr>
 							
 							<tr>
@@ -83,15 +83,30 @@ video {
 					var filelen = FileTag.value.length;
 					var extension = FileTag.value.substring(commaIndex, filelen);
 					
+					var YouTag = document.getElementById("you");
+					
+					
 					if (extension!='.txt'){
 						
 						alert("확장자가 txt인 텍스트 파일만 업로드 가능합니다");
 						FileTag.focus()
 						return false;
 						
+						
 					}else{
 						document.form.submit;
 					}
+					
+					
+					
+					if(YouTag.value==""){
+						alert("상대방 이름을 입력해주세요. 별칭도 좋아요!");
+						YouTag.focus();
+						return false;				
+					}else{
+						document.form.submit;
+					}
+					
 					
 				}
 				

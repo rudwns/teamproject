@@ -22,22 +22,57 @@
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">Write</h2>
-				<form method="post" action="WriteService">
-					<div class="field half" style="float:left;">
-						<label for="nickname">NICKNAME</label> <input type="text" value="${nick}" name="nick" readonly="readonly" />
+				<form name="form" onsubmit="return check()" method="post" action="WriteService">
+					<div class="field half" style="float: left;">
+						<label for="nickname">NICKNAME</label> <input type="text"
+							value="${nick}" name="nick" readonly="readonly" />
 					</div>
-					<div class="field half" style="float:left;">
-						<label for="title">Title</label> <input type="text" name="title" />
+					<div class="field half" style="float: left;">
+						<label for="title">Title</label> <input id="title" type="text"
+							name="title" />
 					</div>
-					<div class="field half" style="clear:both; width: 560px;">
-						<label for="content">content</label><textarea cols="7" rows="4" name="content" ></textarea>
+					<div class="field half" style="clear: both; width: 560px;">
+						<label for="content">content</label>
+						<textarea id="content" cols="7" rows="4" name="content"></textarea>
 					</div>
 
 					<ul class="actions">
 						<li><input type="submit" value="Write" class="special" /></li>
-						<li><input type="button" value="Cancel" onclick="location.href='greenright.jsp'" /></li>
+						<li><input type="button" value="Cancel"
+							onclick="location.href='greenright.jsp'" /></li>
 					</ul>
 				</form>
+
+				<script type="text/javascript">
+				
+				
+				function check(){
+					
+					var TitleTag = document.getElementById("title");
+					var contentTag = document.getElementById("content");
+								
+					
+					if(TitleTag.value==""){
+						alert("제목을 입력해주세요.");
+						TitleTag.focus();
+						return false;				
+					}else{
+						document.form.submit;
+					}
+						
+						
+					if(contentTag.value==""){
+							alert("내용을 입력해주세요.");
+							contentTag.focus();
+							return false;				
+						}else{
+							document.form.submit;
+						}
+				}
+				
+				</script>
+
+
 			</article>
 		</div>
 	</div>

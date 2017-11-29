@@ -22,7 +22,7 @@ create table ssum_member(
    sex varchar(50)
 
 );
-select * from book_member;
+
 
 insert into book_member values('smart','1234','Admin','smart@smhrd.or.kr','062-350-1234');
 insert into book_member values('pkj','1234','haha','rudwns0810@naver.com','010-8929-1461');

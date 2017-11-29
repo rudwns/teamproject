@@ -48,6 +48,28 @@ video{
 			<!-- Return -->
 			<article id="Login" class="active">
 				<h2 class="major">Board</h2>
+				
+				<div class="field half" style="margin-left: 0;">
+				<table id = "weeklyHOT">
+				<tr>
+				<td>이주의 그린라이트</td>
+				</tr>
+				
+				
+				<tr>
+				<td><img height="300px" width="200px" src="images/trafficLight.jpg"></td>
+				<td><img src="images/images.png"></td>
+				</tr>
+				
+				
+				
+				
+				</table>
+					
+					</div>
+				
+				
+				
 				<table>
 					<tr align="center">
 						<td>Num</td>
