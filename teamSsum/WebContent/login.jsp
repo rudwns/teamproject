@@ -19,15 +19,15 @@
 	<div id="wrapper">
 
 		<!-- Main -->
-		<div id="main">
+		<div id="main" style="width: 400px">
 			<!-- Login -->
 			<article id="Login" class="active">
-				<h2 class="major">Login</h2>
+				<h2 class="major" style="padding: 5px;">Login</h2>
 				<form method="post" action="Login">
-					<div class="field half" style="margin-left: 0;">
+					<div style="margin: center;">
 						<label for="id">ID</label> <input type="text" name="id" id="id" style="padding:10px;"/>
 					</div>
-					<div class="field half" style="margin-left: 0;">
+					<div style="margin: center;">
 						<label for="pw">PW</label> <input type="password" name="pw" id="pw" style="padding:10px;"/>
 					</div>
 
