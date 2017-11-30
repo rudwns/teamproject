@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.BoardDAO;
 import com.model.BoardDTO;
@@ -20,7 +21,7 @@ public class likeer extends HttpServlet {
 		
 		int num = Integer.parseInt(request.getParameter("num"));
 		System.out.println("넘겨받은 번호>> " + num);
-		
+		int check = 1;
 		BoardDAO dao = BoardDAO.getInstance();
 		String moveUrl = "";
 		try {
@@ -28,8 +29,10 @@ public class likeer extends HttpServlet {
 			BoardDTO dto = dao.selectBoardOne(num);
 			
 			if (dto != null) {
+				request.setAttribute("1", check);
 				request.setAttribute("dto", dto);
 				System.out.println("성공");
+				System.out.println(check);
 				moveUrl = "greenright.jsp";
 			}else {
 				System.out.println("실패");

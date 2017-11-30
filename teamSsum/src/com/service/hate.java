@@ -23,11 +23,13 @@ public class hate extends HttpServlet {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		String moveUrl = "";
+		int check = 1;
 		try {
 			dao.hate(num);
 			BoardDTO dto = dao.selectBoardOne(num);
 			
 			if (dto != null) {
+				request.setAttribute("check", check);
 				request.setAttribute("dto", dto);
 				System.out.println("¼º°ø");
 				moveUrl = "greenright.jsp";

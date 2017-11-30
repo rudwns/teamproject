@@ -72,28 +72,40 @@
 					</ul>
 				</form>
 				<table>
-					<tr>
-						<td colspan="2" align="right" style="padding: none;">
-							<!-- 현재 로그인한 닉네임과 글을 작성한 닉네임이 같지않으면 좋아요 싫어요 버튼이 나온다. -->
-							<c:if test="${nick != dto.nick }">
-							<!-- 게시글 좋아요 버튼-->
-							<form action="likeer?num=${list.num}">
-							<label for="content">${dto.likeer }</label>
-							<input type="hidden" name="num" value="${dto.num}">
-							<input type="submit" value="LIKE" style="top: 20px; left: 20px;"/>
-							</form>
-							</c:if>
-						</td>
-						<td colspan="2" align="right">
-							<c:if test="${nick != dto.nick }">
-							<!-- 게시글 싫어요 버튼 -->
-							<form action="hate?num=${list.num}"style="padding: none;">
-							<label for="content">${dto.hate}</label>
-							<input type="hidden" name="num" value="${dto.num}">
-							<input type="submit" value="HATE" style="top: 20px; left: 20px;"/>
-							</form>
-							</c:if>
-						</td>
+					
+					<tr>	
+							 <c:if test="${check == 1}">
+							 		<td colspan="4"></td>
+							 </c:if>
+							<c:if test="${check != 1}"> 
+								<td colspan="2" align="right" style="padding: none;">
+								<!-- 현재 로그인한 닉네임과 글을 작성한 닉네임이 같지않으면 좋아요 싫어요 버튼이 나온다. -->
+							<%-- <c:choose>--%>
+							
+								
+									<c:if test="${nick != dto.nick }">
+									<!-- 게시글 좋아요 버튼-->
+									<form action="likeer?num=${list.num}">
+									<label for="content">${dto.likeer }</label>
+									<input type="hidden" name="num" value="${dto.num}">
+									<input type="submit" value="LIKE" style="top: 20px; left: 20px;"/>
+									</form>
+									</c:if>
+								</td>
+								<td colspan="2" align="right">
+									<c:if test="${nick != dto.nick }">
+									<!-- 게시글 싫어요 버튼 -->
+									<form action="hate?num=${list.num}"style="padding: none;">
+									<label for="content">${dto.hate}</label>
+									<input type="hidden" name="num" value="${dto.num}">
+									<input type="submit" value="HATE" style="top: 20px; left: 20px;"/>
+									</form>
+									</c:if>
+								</td>
+							
+							 </c:if> 
+							
+						
 						<tr align="center">
 							<td>Num</td>
 							<td>Nick</td>
@@ -112,10 +124,12 @@
 							
 								<c:forEach items="${list1}" var="list1">
 								<tr align="center">
-								<td>${list1.num}</td>
-								<td>${list1.nick }</td>
-								<td>${list1.day }</td>
-								<td>${list1.content }</td>
+								<c:if test="${list1.num==dto.num}">
+									<td>${list1.num}</td>
+									<td>${list1.nick }</td>
+									<td>${list1.day }</td>
+									<td>${list1.content }</td>
+								</c:if>
 								</tr>
 								</c:forEach> 
 							
