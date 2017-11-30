@@ -20,6 +20,12 @@
 #main #Login {
 	background-color: rgba(11, 3, 0, 0.85)
 }
+#bg{
+	 background-image:url(images/back3.png);
+	 background-size: cover;
+
+}
+
 
 </style>
 </head>
@@ -43,10 +49,18 @@
 						<label for="nickname">NICKNAME</label> <input type="text" name="nick"/>
 					</div>
 					<div class="field half">
-						<label for="email">PERSONNUMEBER</label> <input type="text"	name="email"/>
+
+						<label for="personnumber">생년월일</label> <input type="date"
+							name="personnumber" id="personnumber"
+							style="padding: 10px; background-color: black" />
+
+
 					</div>
 					<div class="field half">
-						<label for="tel">SEX</label> <input type="text"	name="tel"/>
+						성별 
+						<input type="radio" name="gen" id="sex" value="남자" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
+						<input type="radio" name="gen" value="여자" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
+
 					</div>
 
 					<ul class="actions">

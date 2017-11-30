@@ -1084,7 +1084,7 @@
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			/* background-image: linear-gradient(to top, rgb(19, 21, 25), rgb(19, 21, 25)), url("../../images/overlay.png"); */
-			background-size: auto, 256px 256px;
+			background-size: cover;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
 			z-index: 2;
@@ -1099,7 +1099,6 @@
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/back2.png");
 			/* background-color: rgba(243, 181, 184, 0.85); */
 			background-position: center;
 			background-size: cover;
@@ -1488,7 +1487,7 @@
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			/* background-color: rgba(27, 31, 34, 0.85); */
 			border-radius: 4px;
 			opacity: 0;
 		}

@@ -28,7 +28,9 @@ video{
 	z-index : -1;
 
 }
-
+#main  {
+	background-color: rgba(11, 3, 0, 0.8);
+}
 </style>
 </head>
 <body class="is-article-visible">

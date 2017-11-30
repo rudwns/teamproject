@@ -24,8 +24,8 @@ public class UpdateService extends HttpServlet {
 		String id=request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String nick = request.getParameter("nick");
-		String email = request.getParameter("email");
-		String tel = request.getParameter("tel");
+		String personnumber = request.getParameter("personnumber");
+		String gender = request.getParameter("gender");
 		
 		/*if(pw.equals("") || nick.equals("") || email.equals("") || tel.equals("")) {
 			System.out.println("ºñ¾úÀ½");
@@ -35,7 +35,7 @@ public class UpdateService extends HttpServlet {
 			MemberDAO m_dao = MemberDAO.getInstance();
 		
 			try {
-				MemberDTO dto = new MemberDTO(id, pw, nick, email, tel);
+				MemberDTO dto = new MemberDTO(id, pw, nick, personnumber, gender);
 				int cnt = m_dao.update(dto);
 				
 				if(cnt>0) {
