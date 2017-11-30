@@ -100,10 +100,18 @@ create table review(
 select * from review;
 delete from review;
 
-select * from restov5
+select * from gift
 
 
+create table gift(
+title varchar(200),
+img varchar(200),
+link varchar(200),
+id varchar(20)
 
+);
+
+drop table gift
 
 create table restov5(
 title varchar(80),

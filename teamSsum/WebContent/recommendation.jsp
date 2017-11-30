@@ -49,7 +49,7 @@ video{
 					<tr>
 						<td><input type="button" value="날씨" onclick="location.href='weather.jsp'"></td>
 						<td><input type="button" value="맛집!" onclick="location.href='map_in_form.jsp'"></td>
-						<td><input type="button" value="이동" onclick="location.href='main.jsp'"></td>
+						<td><input type="button" value="선물추천" onclick="location.href='gift.jsp'"></td>
 						<td><input type="button" value="영화/공연" onclick="location.href='Temp_show_recomm.jsp'"></td>
 					</tr>
 					<%-- <%
