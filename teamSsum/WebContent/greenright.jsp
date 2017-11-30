@@ -52,7 +52,7 @@ video{
 				<div class="field half" style="margin-left: 0;">
 				<table id = "weeklyHOT">
 				<tr>
-				<td>이주의 그린라이트</td>
+				<td colspan="7" align="center">이주의 그린라이트</td>
 				</tr>
 				
 				
