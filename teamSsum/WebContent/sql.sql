@@ -100,10 +100,28 @@ create table review(
 select * from review;
 delete from review;
 
-select * from restov5
+select * from gift
+
+create table report(
+id varchar(20),
+word_rank1 varchar(20)
+)
+
+insert into report values('ljh','Çâ¼ö')
+insert into report values('ljh1011','Ãä´Ù')
+
+select * from report
 
 
 
+create table gift(
+title varchar(200),
+img varchar(200),
+link varchar(200)
+
+);
+
+drop table gift
 
 create table restov5(
 title varchar(80),
