@@ -102,12 +102,21 @@ delete from review;
 
 select * from gift
 
+create table report(
+id varchar(20),
+word_rank1 varchar(20)
+)
+
+insert into report values('ljh','Çâ¼ö')
+
+select * from report
+
+
 
 create table gift(
 title varchar(200),
 img varchar(200),
-link varchar(200),
-id varchar(20)
+link varchar(200)
 
 );
 
