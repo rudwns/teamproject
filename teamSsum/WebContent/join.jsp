@@ -60,15 +60,15 @@ input[type="radio"] {
 					<div class="field half">
 
 						<label for="personnumber">생년월일</label> <input type="date"
-							name="email" id="personnumber"
+							name="personnumber" id="personnumber"
 							style="padding: 10px; background-color: black" />
 
 
 					</div>
 					<div class="field half">
 						성별 
-						<input type="radio" name="gen" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
-						<input type="radio" name="gen" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
+						<input type="radio" name="gen" id="sex" value="남자" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
+						<input type="radio" name="gen" value="여자" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
 
 					</div>
 

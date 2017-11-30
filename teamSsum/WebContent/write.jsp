@@ -31,7 +31,7 @@
 						<label for="title">Title</label> <input id="title" type="text"
 							name="title" />
 					</div>
-					<div class="field half" style="clear: both; width: 560px;">
+					<div style=" width: 740px; margin-right: 20 px; margin-left: 10px">
 						<label for="content">content</label>
 						<textarea id="content" cols="9" rows="4" name="content"></textarea>
 					</div>

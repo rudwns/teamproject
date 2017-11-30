@@ -21,7 +21,7 @@ public class JoinService extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String nick = request.getParameter("nick");
 		String personnumber = request.getParameter("personnumber");
-		String sex = request.getParameter("sex");
+		String sex = request.getParameter("gen");
 		
 		MemberDAO dao = MemberDAO.getInstance();
 		
@@ -30,8 +30,10 @@ public class JoinService extends HttpServlet {
 			
 			if(cnt>0) {
 				response.sendRedirect("main.jsp");
+			}else {
+				response.sendRedirect("main.jsp");	
 			}
-			response.sendRedirect("main.jsp");			
+					
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

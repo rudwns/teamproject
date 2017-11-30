@@ -15,6 +15,13 @@
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
+<style type="text/css">
+
+#main #Login {
+	background-color: rgba(11, 3, 0, 0.85)
+}
+
+</style>
 </head>
 <body class="is-article-visible">
 
