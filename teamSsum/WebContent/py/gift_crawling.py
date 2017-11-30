@@ -12,7 +12,7 @@ con = cx_Oracle.connect('web/123@localhost:1521/xe')
 
 cur = con.cursor()
 
-my_id="ljh"
+my_id="ljh1011"
 
 sql="select word_rank1 from report where id=( : user_id)"
 

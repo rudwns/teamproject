@@ -108,6 +108,7 @@ word_rank1 varchar(20)
 )
 
 insert into report values('ljh','Çâ¼ö')
+insert into report values('ljh1011','Ãä´Ù')
 
 select * from report
 
