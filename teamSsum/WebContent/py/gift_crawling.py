@@ -12,7 +12,13 @@ con = cx_Oracle.connect('web/123@localhost:1521/xe')
 
 cur = con.cursor()
 
-my_id="ljh1011"
+cur.execute("select id from request")
+
+my_id=cur.fetchone()
+
+my_id=str(my_id).replace("('","").replace("',)","")
+
+my_id
 
 sql="select word_rank1 from report where id=( : user_id)"
 
