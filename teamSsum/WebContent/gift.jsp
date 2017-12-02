@@ -23,16 +23,6 @@
 </noscript>
 
 <style type="text/css">
-video {
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -1;
-}
 
 #bg {
 	opacity: 0.4;
@@ -65,9 +55,7 @@ table#weatherTable, td {
 
 <!-- Wrapper -->
 <div id="wrapper">
-	<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop"
-		volume="Mute"> <source src="movie3.mp4" type="video/mp4">
-	<source src="movie.webm" type="moive/webm"></video> -->
+	
 	<!-- Main -->
 	<div id="main">
 		<!-- Return -->
@@ -90,16 +78,8 @@ table#weatherTable, td {
 			request.setAttribute("marr", marr);
 		%>
 
-		<p>[선물리스트]</p>
-		<%-- <table id="movie">
-			<c:forEach items="${marr}" var="mvo" varStatus="a">
-				<tr align="center">
-					<td><img src="${mvo.img}"></td>
-					<td align="center" id="gift"><a href="${mvo.link}" >${mvo.title}</a></td>
-				</tr>
-			</c:forEach>
-
-		</table> --%>
+		<p style="font-size:18pt;">[선물리스트]</p>
+		
 		<c:forEach items="${marr}" var="mvo" varStatus="a">
 		
 			<div id="absolute2" style="float: left; width:30%;height:200px; ">
@@ -110,23 +90,13 @@ table#weatherTable, td {
 			</div>
 			<hr width="100%">
 			
-			
-			
 		</c:forEach>
-						
-			<%-- <div id="absolute3" style="float: 1eft; width:45%"> 
-			<c:forEach items="${marr}" var="mvo" varStatus="a">
-			<a href="${mvo.link}">${mvo.title}</a>
-			</c:forEach>
-			</div>  --%>
-		
 		
 
 		<ul class="actions">
 			<li><input type="button" value="Cancel"
 				onclick="location.href='recommendation.jsp'" /></li>
 		</ul>
-
 
 		</article>
 	</div>

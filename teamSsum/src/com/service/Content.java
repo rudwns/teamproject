@@ -28,7 +28,7 @@ public class Content extends HttpServlet {
 			dao.updateHit(num);
 			BoardDTO dto = dao.selectBoardOne(num);
 			
-/*			System.out.println("번호: "+dto.getNum());
+			/*System.out.println("번호: "+dto.getNum());
 			System.out.println("제목: "+dto.getTitle());
 			System.out.println("닉네임: "+dto.getNick());
 			System.out.println("내용: "+dto.getContent());

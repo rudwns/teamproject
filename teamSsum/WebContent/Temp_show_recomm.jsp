@@ -23,16 +23,7 @@
 </noscript>
 
 <style type="text/css">
-video {
-   position: fixed;
-   top: 0;
-   left: 0;
-   min-width: 100%;
-   min-height: 100%;
-   width: auto;
-   height: auto;
-   z-index: -1;
-}
+
 #bg{
 	 opacity: 0.4;
 	 background-image:url(images/bg2.jpg);
@@ -51,9 +42,7 @@ video {
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop"
-			volume="Mute"> <source src="movie3.mp4" type="video/mp4">
-		<source src="movie.webm" type="moive/webm"></video> -->
+		
 		<!-- Main -->
 		<div id="main">
 			<!-- Return -->

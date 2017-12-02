@@ -24,8 +24,50 @@ video{
 	width : auto;
 	height : auto;
 	z-index : -1;
-
+	opacity: 0.7;
 }
+
+#topMenu {
+	width: 500px;  
+	height: 60px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	}
+#topMenu ul li { 
+	list-style: none; 
+	color: white; 
+	background-color: rgba(50,50,50,0.7);
+	float: right; 
+	line-height: 30px; 
+	vertical-align: right; 
+	text-align: center; 
+	padding-left:0px;
+	border-radius: 5px;
+	
+ }
+#topMenu .menuLink { 
+	text-decoration:none; 
+	color: white; 
+	width: 100px; 
+	height:38px;
+	font-size: 30pt; 
+	font-weight: bold; 
+	float: right;
+	text-align: center;
+	padding-left:0px;
+	border-radius: 5px;
+	
+} 
+#topMenu .menuLink:hover {
+	color: red; 
+	background-color: #4d4d4d; 
+}
+#wrapper{
+	font-size: 15pt;
+}
+
 
 </style>
 </head>
@@ -34,8 +76,24 @@ video{
                <source src="movie3.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
             </video>
+			<nav id="topMenu">
+        	<ul style="list-style: none; border: 1px;">
+           <c:choose>
+				<c:when test="${empty nick}">
+					<!-- <li style="font-size: 30pt; color:black; font-weight:bold; float: right; position: right;" ><a href="login.jsp">Login</a></li>
+					<li  style="font-size: 30pt; color:black; font-weight:bold; float: right; position: right;"><a href="join.jsp">Join</a></li> -->
+				</c:when>
+				<c:otherwise>
+				
+					<li  class="menuLink"> <a href="Logout.jsp" style="font-size: 18pt; font-weight: bord">Logout</a></li>
+					<li  class="menuLink"><a href="update.jsp" style="font-size: 18pt; font-weight: bord">Edit</a>
+					
+				</c:otherwise>
+				</c:choose>
+		</ul>
+		</nav>		
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" style="padding-top:0px;">
 		 
 		<!-- Header -->
 		<!-- Header -->
@@ -60,19 +118,19 @@ video{
 				</div>
 			</div>
 			<nav>
+	
 				<ul>
 					<c:choose>
 						<c:when test="${empty nick}">
-							<li><a href="login.jsp">Login</a></li>
-							<li><a href="join.jsp">Join</a></li>
+							 <li><a href="login.jsp">Login</a></li>
+							<li><a href="join.jsp">Join</a></li> 
 						</c:when>
 						<c:otherwise>
-							<li><a href="Logout.jsp">Logout</a></li>
-							<li><a href="update.jsp">회원정보수정</a>
-							<li><a href="report_fileUpload.jsp">보고서</a></li>
-							<li><a href="advice.jsp">조언</a></li>
-							<li><a href="recommendation.jsp">추천</a></li>
-							<li><a href="greenright.jsp">그린라이트</a></li>
+							
+							<li><a href="report_fileUpload.jsp" style="font-size: 18pt; font-weight: bord">보고서</a></li>
+							<li><a href="advice.jsp" style="font-size: 18pt; font-weight: bord">조언</a></li>
+							<li><a href="recommendation.jsp" style="font-size: 18pt; font-weight: bord">추천</a></li>
+							<li><a href="greenright.jsp" style="font-size: 18pt; font-weight: bord">그린라이트</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>

@@ -5,6 +5,7 @@ CREATE TABLE show(
     link VARCHAR2(100)
 );
 
+drop table show;
 select * from show
 
 CREATE TABLE movie(

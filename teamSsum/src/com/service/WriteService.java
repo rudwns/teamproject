@@ -21,6 +21,7 @@ public class WriteService extends HttpServlet {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		String moveUrl = "";
+		System.out.println(content);
 		int cnt = 0;
 		try {
 			

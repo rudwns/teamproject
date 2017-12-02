@@ -101,9 +101,9 @@ label{
 				<table>
 					
 					<tr>	
-							
+							<td align="right"></td>
 							<c:if test="${check != 1}"> 
-								<td colspan="2" align="right" style="padding: none;">
+								<td  align="right" style="padding: none;">
 								<!-- 현재 로그인한 닉네임과 글을 작성한 닉네임이 같지않으면 좋아요 싫어요 버튼이 나온다. -->
 							<%-- <c:choose>--%> 
 							
@@ -113,11 +113,11 @@ label{
 									<form action="likeer?num=${list.num}" style="margin-bottom: 0%;">
 									<input type="hidden" name="num" value="${dto.num}" >
 									<label for="content" >${dto.likeer }</label>
-									<input type="submit" value="LIKE" style="color: black;"/>
+									<input type="submit" value="LIKE" style="color: black; "/>
 									</form>
 									</c:if>
 								</td>
-								<td colspan="2" align="right">
+								<td  align="right">
 									<c:if test="${nick != dto.nick }">
 									<!-- 게시글 싫어요 버튼 -->
 									<form action="hate?num=${list.num}"style="padding: none;" style="margin-bottom: 0%;">
@@ -129,7 +129,7 @@ label{
 								</td>
 							
 							 </c:if> 
-							
+								<td></td>
 						
 						<tr align="center">
 							<td>Num</td>
@@ -166,7 +166,7 @@ label{
 						<tr>
 							<!-- 댓글 입력 -->
 							<td colspan="4" align="right">
-							<form action="review" style="margin-bottom: 0%;">
+							<form action="review" style="margin-bottom: 0%;" method="post">
 							<input type="hidden" name="num" value="${dto.num}">
 							<p align="left" style="margin-bottom: 0%; font-size: 20pt;">REVIEW</p>
 							<p align="right" style="margin-bottom: 0%;">NICKAME : ${sessionScope.nick}</p>
