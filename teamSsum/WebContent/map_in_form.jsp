@@ -104,8 +104,14 @@ h2{
 				
 
 
-			<div id="map" style="width:80%;height:500px;margin:auto;"></div>
+			<div id="map" style="width:45%;height:500px;float: left;margin-left: 20px"></div>
+			<div style="overflow:scroll; width:45%; height:500px; padding:10px;float: right;border-color: black;">
+				<c:forEach begin ="0" end="90" var="i">
+				<p style="font-weight: bold; color : white; line-height: 2px;">${list[i].title}</p>
+				<p style= "color: white;line-height: 40px;">${list[i].address}</p>
+				</c:forEach>>
 
+			</div>
 			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=332dd08ad35ac45d739cd2857682cd7e"></script>
 			<script>
 				var mapContainer = document.getElementById('map'), // 지도의 중심좌표
@@ -181,8 +187,8 @@ h2{
 
 
 				</script>
-				<ul class="actions">
-					<li><input type="button" value="Cancel" onclick="location.href='recommendation.jsp'" /></li>
+				<ul class="actions" >
+					<li style="margin-top: 20px;"><input type="button" value="Cancel" onclick="location.href='recommendation.jsp'" /></li>
 				</ul>
 			</article>
 		</div>
