@@ -12,7 +12,7 @@ CREATE TABLE movie(
     image VARCHAR2(200)
 );
 
-select * from movie
+select * from movie	
 
 
 create table week_weather(

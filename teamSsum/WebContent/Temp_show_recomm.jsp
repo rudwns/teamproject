@@ -33,15 +33,20 @@ video {
    height: auto;
    z-index: -1;
 }
+#bg{
+	 background-image:url(images/back3.png);
+	 background-size: cover;
+
+}
 </style>
 
 
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
+		<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop"
 			volume="Mute"> <source src="movie3.mp4" type="video/mp4">
-		<source src="movie.webm" type="moive/webm"></video>
+		<source src="movie.webm" type="moive/webm"></video> -->
 		<!-- Main -->
 		<div id="main">
 			<!-- Return -->

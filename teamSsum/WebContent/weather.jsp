@@ -31,6 +31,16 @@ video {
 	height: auto;
 	z-index: -1;
 }
+#bg{
+	 background-image:url(images/back3.png);
+	 background-size: cover;
+
+}
+
+
+table#weatherTable,td {
+	border: 1px solid white;
+}
 </style>
 
 <script
@@ -42,9 +52,9 @@ video {
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
+	<!-- 	<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
 			volume="Mute"> <source src="movie3.mp4" type="video/mp4">
-		<source src="movie.webm" type="moive/webm"></video>
+		<source src="movie.webm" type="moive/webm"></video> -->
 		<!-- Main -->
 		<div id="main">
 			<!-- Return -->
@@ -61,7 +71,7 @@ video {
 				request.setAttribute("arr", arr);
 				
 			%>
-			<table >
+			<table id="weatherTable" >
 				<tr align="center">
 					<td>DATE</td>
 					<td>WEATHER</td>
@@ -86,7 +96,7 @@ video {
 
 	</div>
 	<!-- BG -->
-	<div id="bg"></div>
+	<div id="bg"></div> 
 
 
 

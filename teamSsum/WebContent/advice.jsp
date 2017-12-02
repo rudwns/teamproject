@@ -30,16 +30,21 @@ video{
  #main #Login {
        background-color: rgba(240,226,208,0.85)
       }
+      
+#bg{
+	 background-image:url(images/back3.png);
+	 background-size: cover;
+}
 </style>
 </head>
 <body class="is-article-visible">
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
+		<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
                <source src="movie3.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
-            </video>
+            </video> -->
 		<!-- Main -->
 		<div id="main">
 			<!-- Search -->
