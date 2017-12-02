@@ -34,8 +34,11 @@
 #main #Login {
 	background-color: rgba(229, 110, 90, 0.7);
 	font-size: 3ren;
+	
 }
-
+tbody{
+	width: 100%;
+}
 </style>
 
 
@@ -62,9 +65,9 @@
 			%>
 
 			<p>[이런 영화는 어때요?]</p>
-			<table id="movie">
+			<table id="movie" style="width: 100%;">
 
-				<tr align="center">
+				<tr align="center" style="width: 20%;">
 					<c:forEach items="${marr}" var="mvo" varStatus="a">
 						<c:if test="${a.count < 6}">
 							<td><img src="${mvo.image}"></td>
@@ -72,7 +75,7 @@
 					</c:forEach>
 				</tr>
 
-				<tr align="center">
+				<tr align="center" style="width: 20%;">
 					<c:forEach items="${marr}" var="mvo" varStatus="a">
 						<c:if test="${a.count < 6}">
 							<td align="center">${mvo.title}</td>
@@ -81,7 +84,7 @@
 					</c:forEach>
 				</tr>
 
-				<tr align="center">
+				<tr align="center" style="width: 20%;">
 					<c:forEach items="${marr}" var="mvo" varStatus="a">
 						<c:if test="${a.count >= 6}">
 							<td><img src="${mvo.image}"></td>
@@ -89,10 +92,10 @@
 					</c:forEach>
 				</tr>
 
-				<tr align="center">
+				<tr align="center" style="width: 20%; ">
 					<c:forEach items="${marr}" var="mvo" varStatus="a">
 						<c:if test="${a.count >= 6}">
-							<td align="center">${mvo.title}</td>
+							<td align="center" style="width:120px;">${mvo.title}</td>
 						</c:if>
 
 					</c:forEach>
