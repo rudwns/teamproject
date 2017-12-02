@@ -14,6 +14,9 @@ CREATE TABLE movie(
 
 select * from movie
 
+select * from request
+
+insert into request values("ljh")
 
 create table week_weather(
 	day VARCHAR2(20), 

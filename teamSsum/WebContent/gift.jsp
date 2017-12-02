@@ -51,7 +51,11 @@ video {
 
 		<%
 			python_connection pc = new python_connection();
-			pc.gift_py();
+			pc.gift_py1();
+			pc.gift_py2();
+			pc.gift_py3();
+			pc.gift_py4();
+			pc.gift_py5();
 
 			String nick = (String) session.getAttribute("nick");
 			giftDAO gdao = new giftDAO();
