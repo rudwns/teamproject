@@ -24,6 +24,7 @@
 }
 
 #bg{
+	opacity: 0.5;
 	 background-image:url(images/back3.png);
 	 background-size: cover;
 
@@ -66,18 +67,18 @@ label{
 					<input type="hidden" name="num" value="${dto.num}">
 					
 					<div class="field half" style="float:left;">
-						<label for="nickname">NICKNAME</label> 
+						<label for="nickname" style="font-size: 20pt;">NICKNAME</label> 
 						<p align="center">${dto.nick}</p>
 					</div>
 					
 					<div class="field half" style="float:left;">
-						<label for="title">Title</label> 
+						<label for="title" style="font-size: 20pt;">Title</label> 
 						<p align="center">${dto.title}</p>
 					</div>
 					
 					<hr width="740px" style="margin-bottom: 1%; margin-top: 0%;"></hr>
 					<div style=" width: 740px; margin-left: 10px">
-						<label for="content" style="border: 1px;">content</label>
+						<label for="content" style="border: 1px; font-size: 20pt;">content</label>
 						<c:choose>
 						<c:when test="${nick == dto.nick}">
 						<textarea cols="7" rows="4" name="content" >${dto.content}</textarea>
@@ -167,10 +168,10 @@ label{
 							<td colspan="4" align="right">
 							<form action="review" style="margin-bottom: 0%;">
 							<input type="hidden" name="num" value="${dto.num}">
-							<p align="left" style="margin-bottom: 0%;">REVIEW</p>
+							<p align="left" style="margin-bottom: 0%; font-size: 20pt;">REVIEW</p>
 							<p align="right" style="margin-bottom: 0%;">NICKAME : ${sessionScope.nick}</p>
 							
-							<input type="text" name="content">
+							<input type="text" name="content" style="font-size: 15pt;">
 							<input type="submit" value="Review" class="special" />
 							</form></td>
 						</tr>

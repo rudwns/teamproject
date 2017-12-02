@@ -81,7 +81,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c C:\\Users\\pc-2\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\pc-2\\git\\ssum\\teamSsum\\WebContent\\py\\gift_crawling.py");
+					"cmd /c C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\gift_crawling.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
@@ -99,7 +99,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c C:\\Users\\pc-2\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\pc-2\\git\\ssum\\teamSsum\\WebContent\\py\\gift_crawling2.py");
+					"cmd /c C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\gift_crawling2.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
@@ -117,7 +117,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c C:\\Users\\pc-2\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\pc-2\\git\\ssum\\teamSsum\\WebContent\\py\\gift_crawling3.py");
+					"cmd /c C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\gift_crawling3.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
@@ -135,7 +135,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c C:\\Users\\pc-2\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\pc-2\\git\\ssum\\teamSsum\\WebContent\\py\\gift_crawling4.py");
+					"cmd /c C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\gift_crawling4.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
@@ -153,7 +153,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c C:\\Users\\pc-2\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\pc-2\\git\\ssum\\teamSsum\\WebContent\\py\\gift_crawling5.py");
+					"cmd /c C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\gift_crawling5.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 

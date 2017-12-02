@@ -34,14 +34,17 @@ video {
    z-index: -1;
 }
 #bg{
-	 background-image:url(images/back3.png);
+	 opacity: 0.4;
+	 background-image:url(images/bg2.jpg);
 	 background-size: cover;
 
 }
 
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(229, 110, 90, 0.7);
+	font-size: 3ren;
 }
+
 </style>
 
 
@@ -139,7 +142,7 @@ video {
 
 			<ul class="actions">
 				<li><input type="button" value="Cancel"
-					onclick="location.href='main.jsp'" /></li>
+					onclick="location.href='recommendation.jsp'" /></li>
 			</ul>
 
 

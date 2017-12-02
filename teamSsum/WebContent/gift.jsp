@@ -34,28 +34,31 @@ video {
 	z-index: -1;
 }
 
-#bg{
-	 background-image:url(images/back3.png);
-	 background-size: cover;
-
-}
-
-body{
-	color : white;
-}
-
-h2{
-	color : white;
-
-}
-
-table#weatherTable,td {
-	border: 1px solid black;
+#bg {
+	opacity: 0.4;
+	background-image: url(images/bg2.jpg);
+	background-size: cover;
 }
 
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(229, 110, 90, 0.7);
+	font-size: 3ren;
 }
+
+body {
+	color: white;
+}
+
+h2 {
+	color: white;
+}
+
+table#weatherTable, td {
+	border: 1px solid black;
+}
+
+
+
 </style>
 
 
@@ -88,19 +91,40 @@ table#weatherTable,td {
 		%>
 
 		<p>[선물리스트]</p>
-		<table id="movie">
+		<%-- <table id="movie">
 			<c:forEach items="${marr}" var="mvo" varStatus="a">
 				<tr align="center">
 					<td><img src="${mvo.img}"></td>
-					<td style="margin-bottom: 100px" align="center"><a href="${mvo.link}">${mvo.title}</a></td>
+					<td align="center" id="gift"><a href="${mvo.link}" >${mvo.title}</a></td>
 				</tr>
 			</c:forEach>
 
-		</table>
+		</table> --%>
+		<c:forEach items="${marr}" var="mvo" varStatus="a">
+		
+			<div id="absolute2" style="float: left; width:30%;height:200px; ">
+			<img src="${mvo.img}">
+			</div>
+			<div id="absolute3" style="float: left; width:60%;height:200px; margin-top: 45px ; ">
+			<a href="${mvo.link}">${mvo.title}</a>
+			</div>
+			<hr width="100%">
+			
+			
+			
+		</c:forEach>
+						
+			<%-- <div id="absolute3" style="float: 1eft; width:45%"> 
+			<c:forEach items="${marr}" var="mvo" varStatus="a">
+			<a href="${mvo.link}">${mvo.title}</a>
+			</c:forEach>
+			</div>  --%>
+		
+		
 
 		<ul class="actions">
 			<li><input type="button" value="Cancel"
-				onclick="location.href='main.jsp'" /></li>
+				onclick="location.href='recommendation.jsp'" /></li>
 		</ul>
 
 

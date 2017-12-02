@@ -29,11 +29,12 @@ video{
 
 }
 #main  {
-	background-color: rgba(104, 92, 121, 0.8);
+	background-color: rgba(180, 100, 80, 0.25);
 }
 
 #bg{
-	 background-image:url(images/bg5.jpg);
+	 opacity: 0.4;
+	 background-image:url(images/people-2606028_1920.jpg);
 	 background-size: cover;
 
 }
@@ -65,7 +66,7 @@ video{
 				
 				
 				<tr>
-				<td><img height="300px" width="400px" src="images/trafficLight3.jpg"></td>
+				<td><img height="300px" width="400px" src="images/1396183254144_20140328_161452.jpg" style="opacity: 0.4;"></td>
 				<td><img src="images/images.png"></td>
 				</tr>
 				

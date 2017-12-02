@@ -66,16 +66,17 @@ video {
 							
 							<tr>
 								<td align = "center"><p>파일선택 :</p></td>
-								<td><input type="file" name="file" id = "file"></td>
+								<td><input type="file" name="file" id = "file" ></td>
 							</tr>
 						</table>
 						
 					</fieldset>
 
 					<ul class="actions" id="lastbutton">
-						<li><input type="submit" value="분석하기▶" class="special" style="border-radius: 15px;"/></li>
+						<li><input type="submit" value="분석하기▶" class="special" style="border-radius: 10px;"/></li>
 						<li><input type="button" value="Cancel"
-							onclick="location.href='main.jsp'"style="border-radius: 15px;" /></li>
+							onclick="location.href='main.jsp'"style="border-radius: 10px;" /></li>
+						
 					</ul>
 				</form>
 				

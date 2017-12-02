@@ -25,6 +25,28 @@ create table week_weather(
 	MAX_TEMP VARCHAR2(20)
   );
   
+  create table gift(
+	tltle VARCHAR2(200), 
+	img VARCHAR2(200), 
+	link VARCHAR2(200)
+  );
+  
+  create table gift_keyword(
+	id VARCHAR2(20), 
+	word_rank1 VARCHAR2(20), 
+	word_rank2 VARCHAR2(40), 
+	word_rank3 VARCHAR2(40), 
+	word_rank4 VARCHAR2(40), 
+	word_rank5 VARCHAR2(40)
+  );
+  
+  create table request(
+	id VARCHAR2(20)
+  );
+  insert into GIFT_KEYWORD values('경준','핸드폰','방향제','키링','지갑','향수');
+  select * from gift_keyword
+  
+  insert into REQUEST values('경준')
 
   
 select * from week_weather
@@ -58,21 +80,6 @@ increment by 1;
 insert into SSUM_MEMBER values('pkj','123','hello','123','man')
 
 
-create table book_info(
-	num number,
-	title varchar(50),
-	author varchar(50),
-	publisher varchar(50),
-	possible number
-)
-
-select * from book_info;
-
-delete from book_info;
-
-drop table book_member;
-drop table book_info;
-drop sequence book_num;
 
 
 create table board(

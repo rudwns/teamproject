@@ -13,5 +13,6 @@
 	<c:remove var="nick" scope="session"/>
 	<!-- main.jsp·Î ÀÌµ¿ -->
 	<c:redirect url="main.jsp" />
+	
 </body>
 </html>

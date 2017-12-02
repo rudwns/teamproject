@@ -12,6 +12,20 @@
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
+<style type="text/css">
+	#main  {
+	background-color: rgba(243, 181, 184, 0.5);
+}
+
+	#bg{
+	opacity: 0.5;
+	 background-image:url(images/back3.png);
+	 background-size: cover;
+
+}
+
+
+</style>
 </head>
 <body class="is-article-visible">
 
@@ -25,15 +39,15 @@
 				<form name="form" onsubmit="return check()" method="post" action="WriteService">
 					<div class="field half" style="float: left;">
 						<label for="nickname">NICKNAME</label> <input type="text"
-							value="${nick}" name="nick" readonly="readonly" />
+							value="${nick}" name="nick" readonly="readonly" style="font-size: 15pt;"/>
 					</div>
 					<div class="field half" style="float: left;">
 						<label for="title">Title</label> <input id="title" type="text"
-							name="title" />
+							name="title" style="font-size: 15pt;"/>
 					</div>
 					<div style=" width: 740px; margin-right: 20 px; margin-left: 10px">
 						<label for="content">content</label>
-						<textarea id="content" cols="9" rows="4" name="content"></textarea>
+						<textarea id="content" cols="9" rows="4" name="content" style="font-size: 15pt;"></textarea>
 					</div>
 
 					<ul class="actions">

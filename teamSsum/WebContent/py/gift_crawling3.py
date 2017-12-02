@@ -20,7 +20,7 @@ my_id=str(my_id).replace("('","").replace("',)","")
 
 my_id
 
-sql="select word_rank3 from report where id=( : user_id)"
+sql="select word_rank3 from gift_keyword where id=( : user_id)"
 
 cur.execute(sql,user_id=my_id)
 

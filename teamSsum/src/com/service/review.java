@@ -17,6 +17,7 @@ public class review extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
+		request.setCharacterEncoding("euc-kr");
 		
 		int num = Integer.parseInt(request.getParameter("num"));
 		String nick = (String) session.getAttribute("nick");
