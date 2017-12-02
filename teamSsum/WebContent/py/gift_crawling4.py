@@ -20,7 +20,7 @@ my_id=str(my_id).replace("('","").replace("',)","")
 
 my_id
 
-sql="select word_rank1 from report where id=( : user_id)"
+sql="select word_rank4 from report where id=( : user_id)"
 
 cur.execute(sql,user_id=my_id)
 
@@ -87,12 +87,6 @@ for a in gift_href:
 gift_href_list
 
 len(gift_href_list)
-
-cur = con.cursor()
-
-cur.execute("delete from gift")
-
-con.commit()
 
 cur = con.cursor()
 
