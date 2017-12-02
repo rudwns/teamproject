@@ -17,14 +17,13 @@
 </noscript>
 <style type="text/css">
 
-#main #Login {
-	background-color: rgba(11, 3, 0, 0.85)
-}
-#bg{
-	 background-image:url(images/bg5.jpg);
-	 background-size: cover;
-
-}
+#main #Login{
+		background-color: rgba(50,50,50,0.4);
+	
+	}
+	body{
+		background-color: rgba(255,232,255,0.07);
+	}
 
 
 </style>
@@ -48,22 +47,22 @@
 					<div class="field half">
 						<label for="nickname">NICKNAME</label> <input type="text" name="nick"/>
 					</div>
-					<div class="field half">
+					<div class="field half" style="border-radius: 10%; margin-top: 30px; box-shadow: none;">
 
 						<label for="personnumber">생년월일</label> <input type="date"
 							name="personnumber" id="personnumber"
-							style="padding: 10px; background-color: black" />
+							style="padding: 10px; background-color: white; color: black; " />
 
 
 					</div>
-					<div class="field half">
+					<div class="field half" style="margin-top: 20px;">
 						성별 
 						<input type="radio" name="gen" id="sex" value="남자" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
 						<input type="radio" name="gen" value="여자" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
 
 					</div>
 
-					<ul class="actions">
+					<ul class="actions" style="margin-top: 20px;">
 						<li><input type="submit" value="Update" class="special" /></li>
 						<li><input type="button" value="Delete" onclick="location.href='delete'" /></li>
 						<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" /></li>

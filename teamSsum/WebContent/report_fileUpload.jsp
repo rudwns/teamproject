@@ -26,12 +26,17 @@ video {
 }
 
 #main #Login {
-	background-color: rgba(226, 117, 140, 0.85)
+	background-color: rgba(226, 190, 190, 0.85)
 }
 
 #bg{
+	 opacity: 0.5;
 	 background-image:url(images/bg1.jpg);
 	 background-size: cover;
+
+}
+#lastbutton{
+	border-radius: 20%;
 
 }
 </style>
@@ -40,11 +45,7 @@ video {
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop"
-			volume="Mute">
-			<source src="movie3.mp4" type="video/mp4">
-			<source src="movie.webm" type="moive/webm">
-		</video> -->
+		
 
 
 		<div id="main">
@@ -71,10 +72,10 @@ video {
 						
 					</fieldset>
 
-					<ul class="actions">
-						<li><input type="submit" value="분석하기▶" class="special" /></li>
+					<ul class="actions" id="lastbutton">
+						<li><input type="submit" value="분석하기▶" class="special" style="border-radius: 15px;"/></li>
 						<li><input type="button" value="Cancel"
-							onclick="location.href='main.jsp'" /></li>
+							onclick="location.href='main.jsp'"style="border-radius: 15px;" /></li>
 					</ul>
 				</form>
 				

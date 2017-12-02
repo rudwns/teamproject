@@ -24,7 +24,20 @@ input[type="radio"] {
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
+<style type="text/css">
 
+	#main #Login{
+		background-color: rgba(50,50,50,0.4);
+	
+	}
+	body{
+		background-color: rgba(255,232,255,0.07);
+	}
+	#personnumber{
+		background-color: #FFFFFF;
+		border-radius: 15px;
+	}
+</style>
 </head>
 <body class="is-article-visible">
 
@@ -34,7 +47,7 @@ input[type="radio"] {
 		<!-- Main -->
 		<div id="main">
 			<!-- Login -->
-			<article id="Login" class="active">
+			<article id="Login" class="active" style="padding-top:20px; padding-bottom:15px; padding-left:0px; padding-right:0px; width: 630px;">
 				<h2 class="major">JOIN</h2>
 				<form id="form" onsubmit="return check()" method="post"	action="Join">
 					<div class="field half">
@@ -57,22 +70,22 @@ input[type="radio"] {
 						<label for="nickname">NICKNAME</label> <input type="text"
 							name="nick" id="nick" style="padding: 10px;" />
 					</div>
-					<div class="field half">
+					<div class="field half" style="border-radius: 10%; margin-top: 30px; box-shadow: none;">
 
 						<label for="personnumber">생년월일</label> <input type="date"
 							name="personnumber" id="personnumber"
-							style="padding: 10px; background-color: black" />
+							style="padding: 10px; background-color: white; color: black; " />
 
 
 					</div>
-					<div class="field half">
+					<div class="field half" style="margin-top: 20px;">
 						성별 
 						<input type="radio" name="gen" id="sex" value="남자" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px;float:none; -webkit-appearance:radio;" />남
 						<input type="radio" name="gen" value="여자" id="sex" style="display: inline-block; clear: both; opacity: 1; margin-right: 0px; float:none; -webkit-appearance:radio;"/>여
 
 					</div>
 
-					<ul class="actions">
+					<ul class="actions" style="margin-top: 20px;">
 						<li><input type="submit" value="Join" class="special" /></li>
 						<li><input type="button" value="Cancel"
 							onclick="history.go(-1)" /></li>
@@ -157,6 +170,6 @@ input[type="radio"] {
 		</div>
 	</div>
 	<!-- BG -->
-	<div id="bg"></div>
+	<!-- <div id="bg"></div> -->
 </body>
 </html>

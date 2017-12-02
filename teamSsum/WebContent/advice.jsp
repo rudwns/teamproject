@@ -19,10 +19,11 @@
 <style type="text/css">
 
 #main #Login {
-       background-color: rgba(69,137,133,0.85)
+       background-color: rgba(69,160,180,0.9);
       }
       
 #bg{
+	 opacity: 0.5;
 	 background-image:url(images/bg4.jpg);
 	 background-size: cover;
 }
@@ -48,7 +49,7 @@
 						<input type="text" value="${pageScope.member.nick}" name="nick" readonly="readonly" />
 					</div>
 				<ul class="actions">
-					<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" /></li>
+					<li><input type="button" value="Cancel" onclick="location.href='main.jsp'" style="margin-top: 15px;"/></li>
 				</ul>
 			</article>
 		</div>

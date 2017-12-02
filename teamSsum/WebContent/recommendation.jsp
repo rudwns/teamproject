@@ -31,18 +31,20 @@ video{
 
 }
 #bg{
+	 opacity: 0.4;
 	 background-image:url(images/bg2.jpg);
 	 background-size: cover;
 
 }
 
 #main #Login {
-	background-color: rgba(229, 118, 97, 0.85)
+	background-color: rgba(229, 110, 90, 0.7);
+	font-size: 3ren;
 }
 
 </style>
 </head>
-<body class="is-article-visible">
+<body class="is-article-visible" style="font-size: 3;">
 	
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -57,33 +59,12 @@ video{
 				<h2 class="major">Return</h2>
 				<table>
 					<tr>
-						<td><input type="button" value="날씨" onclick="location.href='weather.jsp'"></td>
+						<td><input type="button" value="날씨" onclick="location.href='weather.jsp'" ></td>
 						<td><input type="button" value="맛집!" onclick="location.href='map_in_form.jsp'"></td>
 						<td><input type="button" value="선물추천" onclick="location.href='gift.jsp'"></td>
 						<td><input type="button" value="영화/공연" onclick="location.href='Temp_show_recomm.jsp'"></td>
 					</tr>
-					<%-- <%
-						BookDAO return_dao = BookDAO.getInstance();
-						ArrayList<BookDTO> return_dto = return_dao.selectBookAll(1);
-						pageContext.setAttribute("rental_list", return_dto);
-					%>
-					<c:choose>
-						<c:when test="${empty pageScope.rental_list }">
-							<tr>
-								<td colspan="4" align="center">반납할 도서가 존재하지 않습니다.</td>
-							</tr>
-						</c:when>
-						<c:otherwise>
-							<c:forEach items="${pageScope.rental_list}" var="book">
-								<tr>
-									<td>${book.title }</td>
-									<td>${book.author }</td>
-									<td>${book.publisher }</td>
-									<td><a href="Return?book_num=${book.num }">반납</</a></td>
-								</tr>
-							</c:forEach>
-						</c:otherwise>
-					</c:choose> --%>
+					
 
 				</table>
 				<ul class="actions">
