@@ -28,7 +28,7 @@ video {
 }
 
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(153, 153, 204, 0.85)
 }
 
 

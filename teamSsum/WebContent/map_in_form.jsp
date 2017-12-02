@@ -61,6 +61,10 @@ video{
 
 }
 
+#main #Login {
+	background-color: rgba(243, 181, 184, 0.85)
+}
+
 body{
 	color : black;
 }

@@ -26,11 +26,11 @@ video {
 }
 
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(226, 117, 140, 0.85)
 }
 
 #bg{
-	 background-image:url(images/back3.png);
+	 background-image:url(images/bg1.jpg);
 	 background-size: cover;
 
 }

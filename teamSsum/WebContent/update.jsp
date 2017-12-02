@@ -21,7 +21,7 @@
 	background-color: rgba(11, 3, 0, 0.85)
 }
 #bg{
-	 background-image:url(images/back3.png);
+	 background-image:url(images/bg5.jpg);
 	 background-size: cover;
 
 }

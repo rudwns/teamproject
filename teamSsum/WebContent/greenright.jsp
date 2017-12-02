@@ -29,11 +29,11 @@ video{
 
 }
 #main  {
-	background-color: rgba(11, 3, 0, 0.8);
+	background-color: rgba(104, 92, 121, 0.8);
 }
 
 #bg{
-	 background-image:url(images/back3.png);
+	 background-image:url(images/bg5.jpg);
 	 background-size: cover;
 
 }
@@ -65,7 +65,7 @@ video{
 				
 				
 				<tr>
-				<td><img height="300px" width="200px" src="images/trafficLight.jpg"></td>
+				<td><img height="300px" width="400px" src="images/trafficLight3.jpg"></td>
 				<td><img src="images/images.png"></td>
 				</tr>
 				

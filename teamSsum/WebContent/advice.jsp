@@ -17,24 +17,17 @@
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <style type="text/css">
-video{
-	position : fixed;
-	top : 0;
-	left : 0;
-	min-width: 100%;
-	min-height: 100%;
-	width : auto;
-	height : auto;
-	z-index : -1;
-}
- #main #Login {
-       background-color: rgba(240,226,208,0.85)
+
+#main #Login {
+       background-color: rgba(69,137,133,0.85)
       }
       
 #bg{
-	 background-image:url(images/back3.png);
+	 background-image:url(images/bg4.jpg);
 	 background-size: cover;
 }
+
+
 </style>
 </head>
 <body class="is-article-visible">
@@ -42,9 +35,9 @@ video{
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- <video id="videobcg" preload="auto" autoplay="ture" loop="loop" volume="Mute">
-               <source src="movie3.mp4" type="video/mp4">
+               <source src="movie.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
-            </video> -->
+            </video>  -->
 		<!-- Main -->
 		<div id="main">
 			<!-- Search -->

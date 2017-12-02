@@ -52,6 +52,10 @@ h2{
 table#weatherTable,td {
 	border: 1px solid black;
 }
+
+#main #Login {
+	background-color: rgba(243, 181, 184, 0.85)
+}
 </style>
 
 

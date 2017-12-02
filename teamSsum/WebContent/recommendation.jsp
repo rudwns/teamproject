@@ -31,9 +31,13 @@ video{
 
 }
 #bg{
-	 background-image:url(images/back3.png);
+	 background-image:url(images/bg2.jpg);
 	 background-size: cover;
 
+}
+
+#main #Login {
+	background-color: rgba(229, 118, 97, 0.85)
 }
 
 </style>

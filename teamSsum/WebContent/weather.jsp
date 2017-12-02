@@ -36,7 +36,9 @@ video {
 	 background-size: cover;
 
 }
-
+#main #Login {
+	background-color: rgba(243, 181, 184, 0.85)
+}
 
 table#weatherTable,td {
 	border: 1px solid white;
