@@ -120,7 +120,7 @@ white-space:nowrap;
 
 
 					<table style="height: 100px; border-color:black;">
-						<tr>
+						<tr align="center">
 							<td colspan="4">${nick} 님의 호감도 분석 </td>
 						</tr>
 						<tr align="center">
@@ -146,7 +146,7 @@ white-space:nowrap;
 							<td align="right" style="padding-bottom: 0px;"><p style="margin-bottom: 5px;"><h1 id=small_title style="color:black;"><%=arr.get(0).getYou_resp() %></h1></p></td>
 							<td align="left">분</td>
 						</tr>						
-						<tr>
+						<tr align="center">
 							<td colspan="4" style="height: 50px;">
 								<p style="font-size: 19pt; margin-bottom: 0px; margin-top: 80px;">상대와 나의 선톡비율</p>
 							</td>
@@ -156,7 +156,7 @@ white-space:nowrap;
 						<td colspan="4" align="center"><img src="./graph/sendtime.png" ></td>
 						</tr>	
 						
-						<tr>
+						<tr align="center">
 							<td colspan="4" style="height: 50px;">
 								<p style="font-size: 19pt; margin-bottom: 0px; margin-top: 50px;">상대와 자주사용한 키워드</p>
 							</td>
@@ -165,7 +165,7 @@ white-space:nowrap;
 						<tr>
 						<td colspan="4" align="center"><img src="./graph/keyword.png"></td>
 						</tr>
-						<tr>
+						<tr align="center">
 						<td colspan="4" align="center">키워드를 통한 상품 추천</td>
 						</tr>
 						<tr align="center">
@@ -178,7 +178,7 @@ white-space:nowrap;
 						<td colspan="4"><a href="gift.jsp">상품추천 페이지로 이동!</a></td>
 						</tr>
 						
-						<tr>
+						<tr align="center">
 							<td colspan="4" style="height: 50px;">
 								<p style="font-size: 19pt; margin-bottom: 0px; margin-top: 50px;">상대와 사용한 단어 워드클라우드</p>
 							</td>
