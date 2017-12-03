@@ -51,21 +51,21 @@ video {
 		<div id="main">
 			<!-- Info -->
 			<article id="Login" class="active">
-				<h2 class="major">파일업로드</h2>
+				<h1 class="major">파일업로드</h1>
 
 				<form name="form" onsubmit="return check()" action="FileuploadService" method="post" enctype="multipart/form-data">
 
 					<fieldset>
-						<legend align="center">마음이 궁금한 상대와의 대화 파일(.txt)을 선택해주세요</legend>
+						<legend align="center" style="font-size:17pt;">마음이 궁금한 상대와의 대화 파일(.txt)을 선택해주세요</legend>
 
 						<table>
 							<tr>
-								<td align = "center"><p>상대방 이름</p></td>
+								<td align = "center"><p style="font-size:18pt;">상대방 이름</p></td>
 								<td><input id = "you" type="text" name="you"></td>
 							</tr>
 							
 							<tr>
-								<td align = "center"><p>파일선택 :</p></td>
+								<td align = "center"><p style="font-size:18pt">파일선택 :</p></td>
 								<td><input type="file" name="file" id = "file" ></td>
 							</tr>
 						</table>
@@ -117,7 +117,6 @@ video {
 					
 					
 				}
-				
 				
 				
 				</script>

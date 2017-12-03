@@ -47,6 +47,7 @@ video{
 	border-radius: 5px;
 	
  }
+
 #topMenu .menuLink { 
 	text-decoration:none; 
 	color: white; 
@@ -57,7 +58,7 @@ video{
 	float: right;
 	text-align: center;
 	padding-left:0px;
-	border-radius: 5px;
+	
 	
 } 
 #topMenu .menuLink:hover {
@@ -76,7 +77,7 @@ video{
                <source src="movie3.mp4" type="video/mp4">
                <source src="movie.webm" type="moive/webm">
             </video>
-			<nav id="topMenu">
+			<%-- <nav id="topMenu">
         	<ul style="list-style: none; border: 1px;">
            <c:choose>
 				<c:when test="${empty nick}">
@@ -91,7 +92,7 @@ video{
 				</c:otherwise>
 				</c:choose>
 		</ul>
-		</nav>		
+		</nav>		 --%>
 	<!-- Wrapper -->
 	<div id="wrapper" style="padding-top:0px;">
 		 
@@ -122,11 +123,12 @@ video{
 				<ul>
 					<c:choose>
 						<c:when test="${empty nick}">
-							 <li><a href="login.jsp">Login</a></li>
-							<li><a href="join.jsp">Join</a></li> 
+							 <li><a href="login.jsp" style="font-size: 18pt; font-weight: bord">Login</a></li>
+							<li><a href="join.jsp" style="font-size: 18pt; font-weight: bord">Join</a></li> 
 						</c:when>
 						<c:otherwise>
-							
+							<li><a href="Logout.jsp" style="font-size: 18pt; font-weight: bord">Logout</a></li>
+							<li><a href="update.jsp" style="font-size: 18pt; font-weight: bord">Edit</a>
 							<li><a href="report_fileUpload.jsp" style="font-size: 18pt; font-weight: bord">보고서</a></li>
 							<li><a href="advice.jsp" style="font-size: 18pt; font-weight: bord">조언</a></li>
 							<li><a href="recommendation.jsp" style="font-size: 18pt; font-weight: bord">추천</a></li>
