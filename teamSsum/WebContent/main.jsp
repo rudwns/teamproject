@@ -52,7 +52,7 @@ video{
 	color: white; 
 	width: 100px; 
 	height:38px;
-	font-size: 30pt; 
+	font-size: 30pt; 아자차카타
 	font-weight: bold; 
 	float: right;
 	text-align: center;
