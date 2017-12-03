@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <style type="text/css">
+
 video {
 	position: fixed;
 	top: 0;
@@ -32,8 +33,16 @@ ul li{
 	list-style: none; 
 	float: right; 
 }
+
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(226, 190, 190, 0.85)
+}
+
+#bg{
+	 opacity: 0.5;
+	 background-image:url(images/bg1.jpg);
+	 background-size: cover;
+
 }
 </style>
 </head>
@@ -41,12 +50,7 @@ ul li{
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
-			volume="Mute">
-			<source src="movie3.mp4" type="video/mp4">
-			<source src="movie.webm" type="moive/webm">
-		</video>
-
+	
 
 		<%-- 	로그인 한 사용자 정보 불러옴 
 	<%
@@ -73,6 +77,7 @@ ul li{
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">분석</h2>
+
 					<table style="height: 100px;">
 						<tr>
 							<td colspan="2">${nick} 님의 호감도 분석 </td>
@@ -87,6 +92,7 @@ ul li{
 							<td style="padding-bottom: 0px;"><p style="margin-bottom: 5px;">상대방 평균 답장시간 : <%=arr.get(0).getYou_resp() %></p></td>
 						</tr>
 					</table>
+
 					
 					<table>
 						<tr>
