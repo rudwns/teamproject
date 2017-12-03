@@ -660,7 +660,7 @@ wordcloud = WordCloud(font_path='C:/ProgramData/Anaconda3/Lib/site-packages/pyta
 plt.figure(figsize=(10,10))
 plt.imshow(wordcloud)
 plt.axis("off")
-plt.savefig("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\word_cloud.jpg")
+plt.savefig("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\word_cloud.png")
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -687,7 +687,7 @@ ratio = val_key
 
 plt.pie(ratio, labels=labels, shadow=True, startangle=90,autopct='%1.1f%%')
 
-plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\keyword.jpg')
+plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\keyword.png')
     
 labels_unme = ['나','상대방']
 ratio_unme = [my_firstTalk_ratio,you_firstTalk_ratio]
@@ -696,7 +696,7 @@ fig = plt.figure()
 
 plt.pie(ratio_unme, labels=labels_unme, shadow=True, startangle=90,autopct='%1.1f%%')
 
-plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\sendtime.jpg')
+plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\sendtime.png')
     
 
 

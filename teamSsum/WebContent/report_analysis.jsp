@@ -92,6 +92,15 @@ ul li{
 							<td style="padding-bottom: 0px;"><p style="margin-bottom: 5px;">나의 평균 답장시간 : <%=arr.get(0).getI_resp() %></p></td>
 							<td style="padding-bottom: 0px;"><p style="margin-bottom: 5px;">상대방 평균 답장시간 : <%=arr.get(0).getYou_resp() %></p></td>
 						</tr>
+						<tr>
+						<td colspan="2"><img src="./graph/sendtime.png"></td>
+						</tr>			
+						<tr>
+						<td colspan="2"><img src="./graph/keyword.png"></td>
+						</tr>
+						<tr>
+						<td colspan="2"><img src="./graph/word_cloud.png"></td>
+						</tr>
 					</table>
 
 
