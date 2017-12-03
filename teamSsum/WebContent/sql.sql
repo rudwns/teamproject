@@ -71,6 +71,14 @@ fileName varchar(50),
 day varchar(30)
 )
 
+create table report (
+id varchar(20),
+i_affection number,
+you_affection number,
+i_resptime number,
+you_resptime number,
+)
+
 select * from fileboard
 
 // 시퀀스생성
