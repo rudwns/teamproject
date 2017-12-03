@@ -66,8 +66,13 @@
 				
 					<div class="field half" style="margin-left: 0;">
 
-							value="가나다라마바사아자차카타차파하라마바사아자차카타차파하"
-							name="id" readonly="readonly" />
+						<label for="id">호감도 분석${nick}</label> 
+						
+						<p>나의 호감도 : <%=arr.get(0).getI_aff()+"%" %></p>
+						<p>상대방 호감도 : <%=arr.get(0).getYou_aff()+"%" %></p>
+						<p>나의 평균 답장시간 : <%=arr.get(0).getI_resp()+"분" %></p>
+						<p>상대방 평균 답장시간 : <%=arr.get(0).getYou_resp()+"분" %></p>
+						
 					</div>
 					
 

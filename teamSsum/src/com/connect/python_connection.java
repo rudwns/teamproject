@@ -171,7 +171,7 @@ public class python_connection {
 		try {
 			Runtime r = Runtime.getRuntime();
 			Process p = r.exec(
-					"cmd /c \\\\PC-06-PC\\Users\\pc-06\\AppData\\Local\\Programs\\Python\\Python35\\python.exe \\\\PC-06-PC\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\py\\kakao_analysis_final_integrating.py");
+					"cmd /c \\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\py\\kakao_analysis_final_integrating.py");
 
 			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
