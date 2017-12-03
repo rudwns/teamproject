@@ -38,7 +38,7 @@ import sys
 from collections import Counter
 twitter = Twitter()
 
-f = open('C:\\Users\\user\\Desktop\\WebServer\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\teamSsum\\FileSavedFolder\\KakaoTalk.txt', 'r', encoding="utf-8")
+f = open('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\FileSavedFolder\\KakaoTalk.txt', 'r', encoding="utf-8")
 
 sentences = f.readlines()
 
@@ -208,7 +208,7 @@ import numpy as np
 
 # 사용자사전 불러와서 추가 & 사전 완성
 
-custom_dic = pd.read_excel("C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\dic\\gift_dic.xlsx")
+custom_dic = pd.read_excel("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\dic\\gift_dic.xlsx")
 
 for i in range (len(custom_dic.values)):
     goods_dic.update({custom_dic.values[i][0]:custom_dic.values[i][1]})
@@ -567,7 +567,6 @@ else:
 
 # 상대가 나에게 가진 호감도
 you_text_point 
-
 gift_list = []
 
 if len(selectWord(searchword)) == 1:
@@ -661,7 +660,12 @@ wordcloud = WordCloud(font_path='C:/ProgramData/Anaconda3/Lib/site-packages/pyta
 plt.figure(figsize=(10,10))
 plt.imshow(wordcloud)
 plt.axis("off")
-plt.savefig("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\word_cloud.png")
+fig = plt.gcf() #현재 figure에 불러오기
+fig.set_size_inches(5, 5) #크기 바꾸기(inch 단위)
+
+
+fig.savefig("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\word_cloud.png")
+
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -686,18 +690,29 @@ for a in top :
 labels = list_key
 ratio = val_key
 
-plt.pie(ratio, labels=labels, shadow=True, startangle=90,autopct='%1.1f%%')
+plt.pie(ratio, labels=labels, shadow=False, startangle=90,autopct='%1.1f%%')
+fig = plt.gcf() #현재 figure에 불러오기
+fig.set_size_inches(5, 5) #크기 바꾸기(inch 단위)
 
-plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\keyword.png')
+
+fig.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\keyword.png')
     
 labels_unme = ['나','상대방']
 ratio_unme = [my_firstTalk_ratio,you_firstTalk_ratio]
 
 fig = plt.figure()
 
-plt.pie(ratio_unme, labels=labels_unme, shadow=True, startangle=90,autopct='%1.1f%%')
+    
+plt.pie(ratio_unme, labels=labels_unme, shadow=False, startangle=90,autopct='%1.1f%%')
 
-plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\sendtime.png')
+fig = plt.gcf() #현재 figure에 불러오기
+
+fig.set_size_inches(5, 5) #크기 바꾸기(inch 단위)
+
+
+
+fig.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\sendtime.png')
+    
     
 
 
