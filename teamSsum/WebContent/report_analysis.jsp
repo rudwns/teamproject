@@ -1,5 +1,10 @@
+<%@page import="com.model.analysisDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.analysisDAO"%>
+<%@page import="com.connect.python_connection"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -42,13 +47,25 @@
 		pageContext.setAttribute("member", m_dto);
 	%>  --%>
 		<!-- Main -->
+		
+		<%
+		python_connection pc = new python_connection();
+		pc.kakao_analysis();
+			String nick = (String) session.getAttribute("nick");
+			analysisDAO wdao = new analysisDAO();
+			ArrayList<analysisDTO> arr = wdao.report_view();
+
+			request.setAttribute("arr", arr);
+
+		
+		%>
 		<div id="main">
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">분석</h2>
 				
 					<div class="field half" style="margin-left: 0;">
-						<label for="id">호감도 분석${nick}</label> <input type="text"
+
 							value="가나다라마바사아자차카타차파하라마바사아자차카타차파하"
 							name="id" readonly="readonly" />
 					</div>

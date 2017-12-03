@@ -166,4 +166,22 @@ public class python_connection {
 
 		}
 	}
+	public void kakao_analysis() throws IOException {
+
+		try {
+			Runtime r = Runtime.getRuntime();
+			Process p = r.exec(
+					"cmd /c \\\\PC-06-PC\\Users\\pc-06\\AppData\\Local\\Programs\\Python\\Python35\\python.exe \\\\PC-06-PC\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\py\\kakao_analysis_final_integrating.py");
+
+			BufferedReader bfr = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+			String line = "";
+			while ((line = bfr.readLine()) != null) {
+
+			}
+
+		} catch (Exception e) {
+
+		}
+	}
 }

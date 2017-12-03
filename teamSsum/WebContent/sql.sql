@@ -76,10 +76,12 @@ id varchar(20),
 i_affection number,
 you_affection number,
 i_resptime number,
-you_resptime number,
+you_resptime number
 )
 
-select * from fileboard
+select * from report
+
+drop table report
 
 // 시퀀스생성
 create sequence file_num
