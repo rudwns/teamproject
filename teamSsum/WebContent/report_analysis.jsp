@@ -13,19 +13,17 @@
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <style type="text/css">
-video {
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -1;
-}
+
 
 #main #Login {
-	background-color: rgba(243, 181, 184, 0.85)
+	background-color: rgba(226, 190, 190, 0.85)
+}
+
+#bg{
+	 opacity: 0.5;
+	 background-image:url(images/bg1.jpg);
+	 background-size: cover;
+
 }
 </style>
 </head>
@@ -33,12 +31,7 @@ video {
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<video id="videobcg" preload="auto" autoplay="ture" loop="loop"
-			volume="Mute">
-			<source src="movie3.mp4" type="video/mp4">
-			<source src="movie.webm" type="moive/webm">
-		</video>
-
+	
 
 		<%-- 	로그인 한 사용자 정보 불러옴 
 	<%
@@ -55,7 +48,7 @@ video {
 				<h2 class="major">분석</h2>
 				
 					<div class="field half" style="margin-left: 0;">
-						<label for="id">호감도 분석</label> <input type="text"
+						<label for="id">호감도 분석${nick}</label> <input type="text"
 							value="가나다라마바사아자차카타차파하라마바사아자차카타차파하"
 							name="id" readonly="readonly" />
 					</div>
