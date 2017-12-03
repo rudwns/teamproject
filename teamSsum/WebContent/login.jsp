@@ -16,12 +16,12 @@
 <style type="text/css">
 
 	
-	#main #Login{
-		background-color: rgba(50,50,50,0.4);
+#main #Login{
+		background-color: rgba(40,40,40,0.6);
 	
 	}
 	body{
-		background-color: rgba(255,232,255,0.07);
+		background-color: rgba(255,210,220,0.4);
 	}
 </style>
 </head>

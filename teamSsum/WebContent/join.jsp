@@ -3,18 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style type="text/css">
-input[type="radio"] {
-	display: inline-block;
-	width: 19px;
-	height: 19px;
-	margin: -2px 10px 0 0;
-	vertical-align: middle;
-	background-color: blue;
-	cursor: pointer;
-	
-}
-</style>
+
 <title>Dimension by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -27,16 +16,26 @@ input[type="radio"] {
 <style type="text/css">
 
 	#main #Login{
-		background-color: rgba(50,50,50,0.4);
+		background-color: rgba(40,40,40,0.6);
 	
 	}
 	body{
-		background-color: rgba(255,232,255,0.07);
+		background-color: rgba(255,210,220,0.4);
 	}
 	#personnumber{
 		background-color: #FFFFFF;
 		border-radius: 15px;
 	}
+	input[type="radio"] {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin: -2px 10px 0 0;
+	vertical-align: middle;
+	background-color: blue;
+	cursor: pointer;
+	
+}
 </style>
 </head>
 <body class="is-article-visible">
