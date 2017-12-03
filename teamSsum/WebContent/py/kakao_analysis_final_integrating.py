@@ -38,7 +38,7 @@ import sys
 from collections import Counter
 twitter = Twitter()
 
-f = open('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\FileSavedFolder\\KakaoTalk.txt', 'r', encoding="utf-8")
+f = open('C:\\Users\\user\\Desktop\\WebServer\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\teamSsum\\FileSavedFolder\\KakaoTalk.txt', 'r', encoding="utf-8")
 
 sentences = f.readlines()
 
@@ -207,7 +207,8 @@ import pandas as pd
 import numpy as np
 
 # 사용자사전 불러와서 추가 & 사전 완성
-custom_dic = pd.read_excel("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\dic\\gift_dic.xlsx")
+
+custom_dic = pd.read_excel("C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python35\\python.exe C:\\Users\\user\\git\\teamsuum\\teamproject\\teamSsum\\WebContent\\dic\\gift_dic.xlsx")
 
 for i in range (len(custom_dic.values)):
     goods_dic.update({custom_dic.values[i][0]:custom_dic.values[i][1]})

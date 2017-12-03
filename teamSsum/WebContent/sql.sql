@@ -143,16 +143,16 @@ link varchar(200)
 );
 
 drop table gift
-
+select * from restov5;
 create table restov5(
 title varchar(80),
 mood varchar(200),
 address varchar(150),
 phone varchar(80),
-we varchar(130)
-
+we varchar(130),
+img varchar(250)
 );
-
+drop table restov5
 select * from restov5
 
 

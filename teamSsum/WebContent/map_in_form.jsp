@@ -105,10 +105,10 @@ h2{
 
 
 			<div id="map" style="width:45%;height:500px;float: left;margin-left: 20px"></div>
-			<div style="overflow:scroll; width:45%; height:500px; padding:10px;float: right;border-color: black;">
+			<div style="overflow:scroll; width:45%; height:500px; padding:10px;float: right;border:1px solid white;">
 				<c:forEach begin ="0" end="90" var="i">
-				<p style="font-weight: bold; color : white; line-height: 2px;">${list[i].title}</p>
-				<p style= "color: white;line-height: 40px;">${list[i].address}</p>
+				<p style="margin-top:10px; font-size:large; font-weight: 900; color : black; line-height: 2px; ">${list[i].title}</p>
+				<p style= "font-size:medium; color: white;line-height: 40px;">${list[i].address}</p>
 				</c:forEach>>
 
 			</div>

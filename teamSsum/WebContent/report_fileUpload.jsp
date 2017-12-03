@@ -66,7 +66,7 @@ video {
 							
 							<tr>
 								<td align = "center"><p style="font-size:18pt">파일선택 :</p></td>
-								<td><input type="file" name="file" id = "file" ></td>
+								<td><input type="file" name="file" id = "file" style="font-size: small;"></td>
 							</tr>
 						</table>
 						

@@ -66,7 +66,7 @@ video{
 				
 				
 				<tr>
-				<td><img height="300px" width="400px" src="images/1396183254144_20140328_161452.jpg" style="opacity: 0.4;"></td>
+				<td><img height="300px" width="400px" src="images/1396183254144_20140328_161452.jpg" style="opacity: 0.7;"></td>
 				<td><img src="images/images.png"></td>
 				</tr>
 				

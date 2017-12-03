@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Dimension by HTML5 UP</title>
+<title>성공해,썸</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -130,7 +130,7 @@ video{
 							<li><a href="Logout.jsp" style="font-size: 18pt; font-weight: bord">Logout</a></li>
 							<li><a href="update.jsp" style="font-size: 18pt; font-weight: bord">Edit</a>
 							<li><a href="report_fileUpload.jsp" style="font-size: 18pt; font-weight: bord">보고서</a></li>
-							<li><a href="advice.jsp" style="font-size: 18pt; font-weight: bord">조언</a></li>
+							<!-- <li><a href="advice.jsp" style="font-size: 18pt; font-weight: bord">조언</a></li> -->
 							<li><a href="recommendation.jsp" style="font-size: 18pt; font-weight: bord">추천</a></li>
 							<li><a href="greenright.jsp" style="font-size: 18pt; font-weight: bord">그린라이트</a></li>
 						</c:otherwise>
