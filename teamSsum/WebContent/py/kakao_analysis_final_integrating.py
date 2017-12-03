@@ -597,6 +597,112 @@ elif len(selectWord(searchword)) >= 5:
 you_text_point = ("%.2f" % you_text_point)
 my_text_point = ("%.2f" % my_text_point)
 
+
+for i in range(len(my_talk)):
+    for j in range(len(All_time_list)):
+        my_talk[i]=my_talk[i].replace(All_time_list[j],"").replace('\n',"")
+
+
+
+our_talk=[]
+for i in range(len(you_talk)):
+    our_talk.append(you_talk[i])
+    
+
+for i in range(len(my_talk)):
+    our_talk.append(my_talk[i])
+    
+print(len(my_talk))
+print(len(you_talk))
+print(len(our_talk))
+
+our_talk_str=""
+for i in range(len(our_talk)):
+    our_talk_str = our_talk_str+our_talk[i]+" "
+
+
+import nltk
+from konlpy.corpus import kolaw
+from konlpy.tag import Twitter;t  = Twitter()
+
+import matplotlib.pyplot as plt
+
+from wordcloud import WordCloud
+
+token  = t.nouns(our_talk_str)
+print(token)
+
+ko = nltk.Text(token, name = '분석')
+a = ko.vocab().most_common(100)
+
+from matplotlib import font_manager, rc
+font_name = font_manager.FontProperties(fname="C:/ProgramData/Anaconda3/Lib/site-packages/pytagcloud/fonts/NanumGothic.ttf").get_name()
+rc('font', family=font_name)
+
+import matplotlib.pyplot as plt
+import platform
+
+from matplotlib import font_manager,rc
+if platform.system() == 'Darwin':
+    rc('font', family == 'AppleGothic')
+elif platform.system() == 'Windows' :
+    font_name = font_manager.FontProperties(fname="C:/ProgramData/Anaconda3/Lib/site-packages/pytagcloud/fonts/NanumGothic.ttf").get_name()
+    rc('font', family=font_name)
+else : 
+    print('kj')
+    
+from pylab import figure, axes, pie, title, savefig
+
+data = ko.vocab().most_common(300)
+tmp_data = dict(data)
+
+wordcloud = WordCloud(font_path='C:/ProgramData/Anaconda3/Lib/site-packages/pytagcloud/fonts/NanumGothic.ttf', relative_scaling=0.2,background_color='white',).generate_from_frequencies(tmp_data)
+
+plt.figure(figsize=(10,10))
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.savefig("C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\word_cloud.png")
+
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import font_manager, rc
+from matplotlib import style
+from PIL import Image
+
+font_name = font_manager.FontProperties(fname="C:/ProgramData/Anaconda3/Lib/site-packages/pytagcloud/fonts/NanumGothic.ttf").get_name()
+rc('font', family=font_name)
+style.use('ggplot')
+
+top = ko.vocab().most_common(10)
+
+list_key= []
+for a in top :
+    list_key.append(a[0])
+    
+val_key= []
+for a in top :
+    val_key.append(a[1])
+    
+labels = list_key
+ratio = val_key
+
+plt.pie(ratio, labels=labels, shadow=True, startangle=90,autopct='%1.1f%%')
+
+plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\keyword.png')
+    
+labels_unme = ['나','상대방']
+ratio_unme = [my_firstTalk_ratio,you_firstTalk_ratio]
+
+fig = plt.figure()
+
+plt.pie(ratio_unme, labels=labels_unme, shadow=True, startangle=90,autopct='%1.1f%%')
+
+plt.savefig('C:\\Users\\pc-06\\git\\ssssssssss\\teamproject\\teamSsum\\WebContent\\graph\\sendtime.png')
+    
+
+
+
+
 import cx_Oracle 
 
 con = cx_Oracle.connect('web/123@localhost:1521/xe')
