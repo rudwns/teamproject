@@ -28,7 +28,10 @@ video {
 	height: auto;
 	z-index: -1;
 }
-
+ul li{
+	list-style: none; 
+	float: right; 
+}
 #main #Login {
 	background-color: rgba(243, 181, 184, 0.85)
 }
@@ -70,25 +73,39 @@ video {
 			<!-- Info -->
 			<article id="Login" class="active">
 				<h2 class="major">분석</h2>
-				
-					<div class="field half" style="margin-left: 0;">
-						<label for="id">호감도 분석</label>
-						<p>나의 호감도 : <%=arr.get(0).getI_aff()+"%" %></p>
-						<p>상대방 호감도 : <%=arr.get(0).getYou_aff()+"%" %></p>
-						<p>나의 평균 답장시간 : <%=arr.get(0).getI_resp()+"분" %></p>
-						<p>상대방 평균 답장시간 : <%=arr.get(0).getYou_resp()+"분" %></p>
-						 <input type="text"
-							value="가나다라마바사아자차카타차파하라마바사아자차카타차파하"
-							name="id" readonly="readonly" />
-					</div>
+					<table style="height: 100px;">
+						<tr>
+							<td colspan="2">${nick} 님의 호감도 분석 </td>
+						</tr>
+						<tr>
+							<td style="width: 120px; padding-bottom: 0px;"><p style="margin-bottom: 5px;">나의호감도 : <%=arr.get(0).getI_aff() %></p></td>
+							<td style="width: 120px; padding-bottom: 0px;"><p style="margin-bottom: 5px;">상대방 호감도 : <%=arr.get(0).getYou_aff() %></p></td>
+						</tr>
+						
+						<tr>
+							<td style="padding-bottom: 0px;"><p style="margin-bottom: 5px;">나의 평균 답장시간 : <%=arr.get(0).getI_resp() %></p></td>
+							<td style="padding-bottom: 0px;"><p style="margin-bottom: 5px;">상대방 평균 답장시간 : <%=arr.get(0).getYou_resp() %></p></td>
+						</tr>
+					</table>
 					
-
+					<table>
+						<tr>
+							<td colspan="4"></td>
+						</tr>
+						<tr>
+							<td rowspan="2"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						
+					</table>
 					<ul class="actions">
 						<li><input type="submit" value="Update" class="special" /></li>
-						<li><input type="button" value="Cancel"
-							onclick="location.href='main.jsp'" /></li>
+						<li><input type="button" value="Cancel"onclick="location.href='main.jsp'" /></li>
 					</ul>
-				</form>
+				
+				
 			</article>
 		</div>
 	</div>
