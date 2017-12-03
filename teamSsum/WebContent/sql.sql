@@ -156,4 +156,4 @@ we varchar(130)
 select * from restov5
 
 
-
+select * from all_table;

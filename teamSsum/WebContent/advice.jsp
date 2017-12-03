@@ -20,6 +20,7 @@
 
 #main #Login {
        background-color: rgba(69,160,180,0.9);
+       font-size: 15pt;
       }
       
 #bg{
@@ -43,9 +44,9 @@
 		<div id="main">
 			<!-- Search -->
 			<article id="Login" class="active">
-				<h2 class="major">조언</h2>
+				<h1 class="major">조언</h1>
 				<div class="field half" style="margin-left:0;">
-						<label for="nickname">추천대화시간</label>
+						<label for="nickname" style="font-size:18pt;">추천대화시간</label>
 						<input type="text" value="${pageScope.member.nick}" name="nick" readonly="readonly" />
 					</div>
 				<ul class="actions">

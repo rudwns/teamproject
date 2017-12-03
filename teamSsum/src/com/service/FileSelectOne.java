@@ -22,6 +22,7 @@ public class FileSelectOne extends HttpServlet {
 		String id = (String)session.getAttribute("id");
 
 		FileDAO dao = FileDAO.getInstance();
+		String moveURL = "";
 
 		try {
 			FileVO vo = dao.selectOne(id);
@@ -29,6 +30,7 @@ public class FileSelectOne extends HttpServlet {
 			if (vo != null) {
 				request.setAttribute("vo", vo);
 				// vo가 null이 아닐 때 request 영역에 vo 객체 저장!
+				moveURL = "analysis.jsp";
 			}
 
 			RequestDispatcher dispatacher = request.getRequestDispatcher("report_analysis.jsp");
