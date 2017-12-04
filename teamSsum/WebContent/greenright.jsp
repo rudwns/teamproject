@@ -55,10 +55,10 @@ video{
 		<!-- Main -->
 		<div id="main">
 			<!-- Return -->
-			<article id="Login" class="active">
+			<article id="Login" class="active" style="width: 900px;">
 				<h2 class="major">Board</h2>
 				
-				<div class="field half" style="margin-left: 0;">
+				<div class="field half" style="margin-left: 0; ">
 				<table id = "weeklyHOT">
 				<tr>
 				<td colspan="7" align="center">이주의 그린라이트</td>
@@ -82,7 +82,7 @@ video{
 				<table>
 					<tr align="center">
 						<td>Num</td>
-						<td>Nick</td>
+						<td style="width: 80px;">Nick</td>
 						<td>Title</td>
 						<td>Date</td>
 						<td>Hit</td>
@@ -99,7 +99,7 @@ video{
 					<c:forEach items="${list }" var="list">
 						<tr align="center">
 							<td>${list.num }</td>
-							<td>${list.nick }</td>
+							<td style="width: 116px;">${list.nick }</td>
 							<!-- 여기서 누르면 content로 넘어가서 hit 값이 증가한다. -->
 							<td><a href="Content?num=${list.num}">${list.title }</a></td>
 							

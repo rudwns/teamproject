@@ -100,8 +100,8 @@ create table board(
 	content varchar(300),
 	day date,
 	hit number,
-	hate number,
-	likeer number
+	likeer number,
+	hate number
 )
 alter table board add hate number;
 delete from board;
