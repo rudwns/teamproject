@@ -36,7 +36,7 @@ public class FileuploadService extends HttpServlet {
 	MultipartRequest multi = null; 
 	
 	if (isMulti){
-		 multi = new MultipartRequest(request, saveDir, max, encoding, new DefaultFileRenamePolicy());
+		 multi = new MultipartRequest(request, saveDir, max, encoding);
 		// request 객체, 파일이 저장될 디렉토리, 올릴 수 있는 파일최대용량, 제목 인코딩, 파일명 중복회피 객체
 		FileDAO dao = FileDAO.getInstance();
 		
