@@ -95,11 +95,12 @@ insert into SSUM_MEMBER values('pkj','123','hello','123','man')
 
 create table board(
 	num number,
-	title varchar(50),
-	nickname varchar(50),
-	content varchar(200),
+	title varchar(300),
+	nickname varchar(100),
+	content varchar(300),
 	day date,
 	hit number,
+	hate number,
 	likeer number
 )
 alter table board add hate number;

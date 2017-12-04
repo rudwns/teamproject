@@ -165,7 +165,7 @@ white-space:nowrap;
 						<tr>
 						<td colspan="4" align="center"><img src="./graph/keyword.png"></td>
 						</tr>
-						<tr align="center">
+						<!--  <tr align="center">
 						<td colspan="4" align="center">키워드를 통한 상품 추천</td>
 						</tr>
 						<tr align="center">
@@ -173,9 +173,9 @@ white-space:nowrap;
 						<td><%=garr.get(0).getWord_rank2() %></td>
 						<td><%=garr.get(0).getWord_rank3() %></td>
 						<td><%=garr.get(0).getWord_rank4() %></td>
-						</tr>
-						<tr align="center">
-						<td colspan="4"><a href="gift.jsp">상품추천 페이지로 이동!</a></td>
+						</tr>-->
+						<tr align="right" sty>
+						<td colspan="4"><a href="gift.jsp">상품추천 바로가기</a></td>
 						</tr>
 						
 						<tr align="center">
