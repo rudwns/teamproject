@@ -7,7 +7,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Dimension by HTML5 UP</title>
+<title>성공해,썸</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -34,7 +34,7 @@ video{
 
 #bg{
 	 opacity: 0.4;
-	 background-image:url(images/people-2606028_1920.jpg);
+	 background-image:url(images/bg4.jpg);  
 	 background-size: cover;
 
 }
@@ -59,7 +59,7 @@ video{
 				<h2 class="major">Board</h2>
 				
 				<div class="field half" style="margin-left: 0;">
-				<table id = "weeklyHOT">
+				<table id = "weeklyHOT" style="width: ">
 				<tr>
 				<td colspan="7" align="center">이주의 그린라이트</td>
 				</tr>
@@ -121,7 +121,7 @@ video{
 	</div>
 
 	<!-- BG -->
-	<div id="bg"></div>
+	<!-- <div id="bg"></div> -->
 
 </body>
 </html>

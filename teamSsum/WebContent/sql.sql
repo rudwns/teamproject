@@ -100,7 +100,8 @@ create table board(
 	content varchar(200),
 	day date,
 	hit number,
-	likeer number
+	likeer number,
+	hate number
 )
 alter table board add hate number;
 delete from board;
@@ -110,7 +111,7 @@ drop table board;
 create sequence board_num
 start with 1
 increment by 1;
-
+dorp sequence board_num;
 
 create table review(
 	num number,

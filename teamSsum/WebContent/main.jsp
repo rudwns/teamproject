@@ -102,7 +102,7 @@ video{
 			<div class="logo">
 				<span class="icon fa-heart"></span>
 			</div>
-			<div class="content">
+			<div class="content" style="color: ">
 				<div class="inner">
 					<h1>¼º°øÇØ,½æ</h1>
 					<c:choose>
